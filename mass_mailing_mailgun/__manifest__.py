@@ -22,7 +22,7 @@
     'summary': 'Install necesary modules for Mass Mailing and Mailgun.',
     'author': 'Valentín Castravete Georgian, SDi Soluciones Informáticas',
     'website': 'https://sdi.web.sdi.es/odoo/',
-    'license': 'AGPL',
+    'license': 'AGPL-3',
     'category': 'Mail',
     'version': '12.0.1.0.0',
     'depends': [
