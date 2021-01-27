@@ -1,6 +1,12 @@
 name: Flake8
 
-on: [push, pull_request]
+on:
+  push:
+    path:
+      - '*.py'
+  pull_request:
+    path:
+      - '*.py'
 
 jobs:
   flake8_py3:
@@ -17,14 +23,12 @@ jobs:
       
       - name: Install dependencies
         run: python -m pip install --upgrade pip
-        
-      - name: Lint with flake8
-        run: |
-          pip install flake8
-          flake8 .
       
-      #- name: Install flake8
-      #  run: pip install flake8
+      - name: Install flake8
+        run: pip install flake8
+
+      - name: Run flake8
+        run: flake8 .
 
       #- name: Flake8 action
         # You may pin to the exact commit or the version.
