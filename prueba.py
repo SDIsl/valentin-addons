@@ -1,2 +1,2 @@
-#   Comentario con más de 80 caracteres para probar que flake8 hace su función 
+#   Comentario con más de 80 caracteres para probar que flake8 hace su función
 # y lo muestra
