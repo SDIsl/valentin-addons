@@ -25,3 +25,5 @@ jobs:
           # The name of the check to add annotations to.
           # Generally the same as the job that uses this action
           checkName: 'flake8_py3'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
