@@ -18,8 +18,8 @@
 #
 ###############################################################################
 {
-    'name': 'Mass Mailing Mailgun',
-    'summary': 'Install necesary modules for Mass Mailing and Mailgun.',
+    'name': 'Vertical Mass Mailing',
+    'summary': 'Install necesary modules for Mass Mailing and Mailgun use.',
     'author': 'Valentín Castravete Georgian, SDi Soluciones Informáticas',
     'website': 'https://sdi.web.sdi.es/odoo/',
     'license': 'AGPL-3',

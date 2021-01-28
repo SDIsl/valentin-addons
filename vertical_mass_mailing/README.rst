@@ -1,8 +1,8 @@
 =====================
-Mass Mailing Mailgun
+Vertical Mass Mailing
 =====================
 
-This module installs necessary modules for Mass Mailing and Mailgun.
+This module installs necessary modules for Mass Mailing and Mailgun use.
 
 **Table of contents**
 
