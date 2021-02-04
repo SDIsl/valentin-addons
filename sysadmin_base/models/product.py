@@ -9,8 +9,8 @@ class Product(models.Model):
 
     internat_equipment = fields.Boolean(string='Internal equipment')
 
-    # first_type = fields.Selection(selection_add=[('product', 'Storable Product')], track_visibility='onchange')
-    # subtype = fields.Selection(selection_add=[('product', 'Storable Product')], track_visibility='onchange')
+    # first_type
+    # subtype
 
     s_n = fields.Char(string='S/N')
     ip = fields.Char(string='IP')
