@@ -31,5 +31,7 @@
     ],
     'data': [
         'views/hr_employee_views.xml',
+        'views/product_template_views.xml',
+        'views/product_category_views.xml',
     ]
 }
