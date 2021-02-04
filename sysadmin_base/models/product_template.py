@@ -13,7 +13,7 @@ class ProductTemplate(models.Model):
 
     hardware_properties = fields.Boolean(
         readonly=True, store=True, related='categ_id.show_hardware_properties')
-    
+
     cpu = fields.Char(string='CPU')
     ram = fields.Char(string='RAM')
     data_storage = fields.Char(string='Data storage')
