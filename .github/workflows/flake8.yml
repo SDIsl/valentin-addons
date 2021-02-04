@@ -4,6 +4,7 @@ on:
   push:
     path:
       - '*.py'
+      - '!__init__.py'
 
 jobs:
   flake8_py3:
@@ -29,4 +30,3 @@ jobs:
           checkName: 'flake8_py3'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          args: "--ignore=F401 ."
