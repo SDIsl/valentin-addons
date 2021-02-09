@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="type">form</field>
         <field name="arch" type="xml">
-            <xpath expr="//div[@name='options']" position="replace">
+            <div name="options" position="replace">
                 <div id="sale_ok_div">
                     <field name="sale_ok"/>
                     <label for="sale_ok"/>
@@ -18,8 +18,8 @@
                     <field name="purchase_ok"/>
                     <label for="purchase_ok"/>
                 </div>
-            </xpath>
-            <xpath expr="//page[@name='sales']" position="after">
+            </div>
+            <page name="sales" position="after">
                 <page string="Technical Properties" attrs="{'invisible':[('internal_equipment','=',False)]}" name="technical_properties">
                     <group>
                         <group name="general_information" string="General Information">
@@ -35,7 +35,7 @@
                         </group>
                     </group>
                 </page>
-            </xpath>
+            </page>
         </field>
     </record>
 </odoo>
