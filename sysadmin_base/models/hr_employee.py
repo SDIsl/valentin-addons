@@ -10,4 +10,6 @@ class HrEmployee(models.Model):
     has_dialoga_access = fields.Boolean(
         string='Has Dialoga access',
     )
-    is_trainee = fields.Boolean(string='Is trainee')
+    is_trainee = fields.Boolean(
+        string='Is trainee'
+    )
