@@ -8,29 +8,31 @@ class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
     internal_equipment = fields.Boolean(
-        string='Internal equipment'
+        string='Internal equipment',
     )
 
     information = fields.Text(
-        string='Information'
+        string='Information',
     )
 
     hardware_properties = fields.Boolean(
-        readonly=True, store=True, related='categ_id.show_hardware_properties'
+        readonly=True,
+        store=True,
+        related='categ_id.show_hardware_properties',
     )
 
     cpu = fields.Char(
-        string='CPU'
+        string='CPU',
     )
     ram = fields.Char(
-        string='RAM'
+        string='RAM',
     )
     data_storage = fields.Char(
-        string='Data storage'
+        string='Data storage',
     )
     ip = fields.Char(
-        string='IP'
+        string='IP',
     )
     os_version = fields.Char(
-        string='OS Version'
+        string='OS Version',
     )
