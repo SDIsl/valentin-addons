@@ -20,9 +20,9 @@
         <field name="inherit_id" ref="hr.view_employee_tree"/>
         <field name="type">tree</field>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='work_phone']" position="after">
+            <field name="work_phone" position="after">
                 <field name="has_dialoga_access"/>
-            </xpath>
+            </field>
         </field>
     </record>
     <record id="view_employee_filter" model="ir.ui.view">
