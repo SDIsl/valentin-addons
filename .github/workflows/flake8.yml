@@ -2,8 +2,8 @@ name: Flake8
 
 on:
   push:
-    paths-ignore:
-      - '**/__init__.py'
+    paths:
+      - '**.py'
 
 jobs:
   flake8_py3:
