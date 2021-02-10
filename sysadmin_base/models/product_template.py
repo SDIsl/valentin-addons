@@ -10,17 +10,14 @@ class ProductTemplate(models.Model):
     internal_equipment = fields.Boolean(
         string='Internal equipment',
     )
-
     information = fields.Text(
         string='Information',
     )
-
     hardware_properties = fields.Boolean(
         readonly=True,
         store=True,
         related='categ_id.show_hardware_properties',
     )
-
     cpu = fields.Char(
         string='CPU',
     )
