@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//div/field[@name='sale_ok']/.." position="after">
+                <div>
+                    <field name="internal_equipment"/>
+                    <label for="internal_equipment"/>
+                </div>
+            </xpath>
+            <page name="sales" position="after">
+                <page string="Technical Properties" attrs="{'invisible':[('internal_equipment','=',False)]}" name="technical_properties">
+                    <group>
+                        <group name="general_information" string="General Information">
+                            <field name="information"/>
+                            <field name="hardware_properties" invisible="1"/>
+                        </group>
+                        <group name="hardware_properties" string="Hardware Properties" attrs="{'invisible':[('hardware_properties','=',False)]}">
+                            <field name="cpu"/>
+                            <field name="ram"/>
+                            <field name="data_storage"/>
+                            <field name="ip"/>
+                            <field name="os_version"/>
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>
