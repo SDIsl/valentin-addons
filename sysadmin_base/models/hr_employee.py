@@ -7,5 +7,9 @@ from odoo import fields, models
 class HrEmployee(models.Model):
     _inherit = 'hr.employee'
 
-    has_dialoga_access = fields.Boolean(string='Has Dialoga access')
-    is_trainee = fields.Boolean(string='Is trainee')
+    has_dialoga_access = fields.Boolean(
+        string='Has Dialoga access',
+    )
+    is_trainee = fields.Boolean(
+        string='Is trainee',
+    )
