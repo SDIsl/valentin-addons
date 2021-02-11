@@ -74,8 +74,8 @@ msgstr "Equipo Interno"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
-msgid "Internal Preferences"
-msgstr "Preferencias Internas"
+msgid "Internal Tools"
+msgstr "Herramientas Internas"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__internal_equipment

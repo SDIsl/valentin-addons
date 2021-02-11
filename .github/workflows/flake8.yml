@@ -2,12 +2,12 @@ name: Flake8
 
 on:
   push:
-    paths-ignore:
-      - '**/__init__.py'
+    paths:
+      - '**.py'
 
 jobs:
   flake8_py3:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     
     steps:
       - uses: actions/checkout@v2

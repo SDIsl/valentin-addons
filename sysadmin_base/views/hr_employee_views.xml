@@ -6,7 +6,7 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <page name="public" position="after">
-                <page name="internal_preferences" string="Internal Preferences">
+                <page name="internal_tools" string="Internal Tools">
                     <group>
                         <field name="has_dialoga_access"/>
                         <field name="is_trainee"/>
