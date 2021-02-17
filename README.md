@@ -12,7 +12,7 @@ Repositorios de las prácticas en SDi de Valentín Castravete Georgian.
 * Herramientas de control de tiempo: Jira, Proyectos de Odoo.
 * Uso del ERP Odoo y comprensión de los flujos de trabajo propios de una empresa: Circuito Comercial, Facturación, Contabilidad, Inventario...
 * Aprender a desarrollar desde cero un módulo para Odoo, en la versión 12.0. Esto incluye:
-  -Toma de requisitos para el módulo.
+  - Toma de requisitos para el módulo.
   - Análisis.
   - Diseño, tanto diagramas E-R, como UML u otros.
   - Desarrollo del módulo.
