@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
+
     <record id="product_category_form_view" model="ir.ui.view">
         <field name="model">product.category</field>
         <field name="inherit_id" ref="product.product_category_form_view"/>
@@ -11,6 +12,7 @@
             </group>
         </field>
     </record>
+
     <record id="product_template_search_form_view_stock" model="ir.ui.view">
         <field name="model">product.template</field>
         <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
@@ -21,4 +23,5 @@
             </filter>
         </field>
     </record>
+
 </odoo>

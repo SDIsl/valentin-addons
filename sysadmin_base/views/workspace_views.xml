@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="workspace_workspace_view_tree" model="ir.ui.view">
+        <field name="name">workspace.workspace.view.tree</field>
+        <field name="model">workspace.workspace</field>
+        <field name="arch" type="xml">
+            <tree string="Workspace">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="location"/>
+                <field name="item_count"/>
+                <field name="employee_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="workspace_workspace_view_form" model="ir.ui.view">
+        <field name="name">workspace.workspace.view.form</field>
+        <field name="model">workspace.workspace</field>
+        <field name="arch" type="xml">
+            <form string="Workspace">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="workspace_item_count" icon="fa-th-list" type="object">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="item_count"/>
+                                </span>
+                                <span class="o_stat_text">Items</span>
+                            </div>
+                        </button>
+                    </div>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                    <notebook>
+                        <page string="Information" name="workspace_information">
+                            <group>
+                                <field name="location"/>
+                            </group>
+                        </page>
+                        <page string="Employees" name="workspace_employees">
+                            <field name="employee_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="has_dialoga_access"/>
+                                    <field name="is_trainee"/>
+                                    <field name="work_email"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- <record id="workspace_item_view_search" model="ir.ui.view">
+        <field name="name">workspace.item.view.search</field>
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <search string="Items">
+                <filter string="Workspaces" name="workspace_items" context="{'group_by':'workspace_id'}"/>
+                <filter string="Products" name="product_items" context="{'group_by':'product_id'}"/>
+            </search>
+        </field>
+    </record> -->
+
+    <record id="workspace_item_view_kanban" model="ir.ui.view">
+        <field name="name">workspace.item.view.kanban</field>
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <kanban string="Items" default_group_by="workspace_id">
+                <field name="name"/>
+                <field name="sn"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content">
+                            <b>Name:</b>
+                            <field name="name"/>
+                            <br/>
+                            <b>SN:</b>
+                            <field name="sn"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="workspace_item_view_tree" model="ir.ui.view">
+        <field name="name">workspace.item.view.tree</field>
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <tree string="Item">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="sn"/>
+                <field name="product_id"/>
+                <field name="workspace_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="workspace_item_view_form" model="ir.ui.view">
+        <field name="name">workspace.item.view.form</field>
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <form string="Item">
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                    <group>
+                        <field name="sn"/>
+                    </group>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="workspace_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

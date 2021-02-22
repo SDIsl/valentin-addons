@@ -2,7 +2,7 @@
 Sysadmin Base
 =====================
 
-Module for sysadmin using.
+Module for SysAdmin using.
 
 **Table of contents**
 
