@@ -36,7 +36,7 @@ class ProductTemplate(models.Model):
         ('RAM64GB', '64 GB'),
         ('RAM96GB', '96 GB'),
         ('RAM128GB', '128 GB'),
-    ],'RAM')
+    ], 'RAM')
     data_storage = fields.Char(
         string='Data storage',
     )
@@ -49,7 +49,6 @@ class ProductTemplate(models.Model):
     item_count = fields.Integer(
         compute='_compute_item_count',
     )
-
 
     @api.one
     def _compute_item_count(self):

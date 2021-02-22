@@ -21,7 +21,6 @@ class HrEmployee(models.Model):
        string='Workspaces',
     )
 
-
     def employee_item_count(self):
         return{
             'name': 'Items',

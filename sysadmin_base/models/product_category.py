@@ -12,7 +12,6 @@ class ProductCategory(models.Model):
         help='Show hardware properties on product',
     )
 
-
     @api.onchange('show_hardware_properties')
     def _onchange_show_hardware_properties(self):
         if self.show_hardware_properties:

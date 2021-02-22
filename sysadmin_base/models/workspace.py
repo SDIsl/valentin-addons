@@ -30,7 +30,6 @@ class Workspace(models.Model):
         string='Employees',
     )
 
-
     @api.one
     def _compute_item_count(self):
         self.item_count = len(self.env['workspace.item'].search([
