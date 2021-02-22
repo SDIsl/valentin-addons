@@ -46,6 +46,7 @@ class Workspace(models.Model):
             'domain': [('workspace_id', '=', self.id)]
         }
 
+
 class WorkspaceItem(models.Model):
     _name = 'workspace.item'
     _description = 'Item'
