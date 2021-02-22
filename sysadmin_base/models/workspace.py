@@ -46,7 +46,6 @@ class Workspace(models.Model):
             'domain': [('workspace_id', '=', self.id)]
         }
 
-
 class WorkspaceItem(models.Model):
     _name = 'workspace.item'
     _description = 'Item'
@@ -72,7 +71,6 @@ class WorkspaceItem(models.Model):
         required=True,
         group_expand='_expand_workspace_ids'
     )
-
 
     @api.model
     def _expand_workspace_ids(self, workspaces, domain, order):
