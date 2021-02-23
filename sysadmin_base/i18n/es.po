@@ -104,13 +104,13 @@ msgstr ""
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
 msgid "<span class=\"o_stat_text\"> Items</span>"
-msgstr "<span class=\"o_stat_text\"> Artículos</span>"
+msgstr "<span class=\"o_stat_text\"> Elementos</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
 msgid "<span class=\"o_stat_text\">Items</span>"
-msgstr "<span class=\"o_stat_text\">Artículos</span>"
+msgstr "<span class=\"o_stat_text\">Elementos</span>"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__cpu
@@ -236,13 +236,13 @@ msgstr "En prácticas"
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_tree
 msgid "Item"
-msgstr "Artículo"
+msgstr "Elemento"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__item_count
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_template__item_count
 msgid "Item Count"
-msgstr "Nº artículos"
+msgstr "Nº elementos"
 
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_items
@@ -250,7 +250,7 @@ msgstr "Nº artículos"
 #: model:ir.ui.menu,name:sysadmin_base.menu_items
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
 msgid "Items"
-msgstr "Artículos"
+msgstr "Elementos"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item____last_update
@@ -353,7 +353,7 @@ msgstr "Espacio de trabajo"
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_workspace_items
 #: model:ir.ui.menu,name:sysadmin_base.menu_workspace_items
 msgid "Workspace Items"
-msgstr "Artículos del espacio de trabajo"
+msgstr "Elementos del espacio de trabajo"
 
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_workspaces
@@ -365,7 +365,7 @@ msgstr "Espacios de trabajo"
 #. module: sysadmin_base
 #: model:res.groups,name:sysadmin_base.group_workspace
 msgid "Workspaces Items using"
-msgstr "Uso de Artículos de los Espacios de trabajo"
+msgstr "Uso de Elementos de los Espacios de trabajo"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
