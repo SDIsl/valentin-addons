@@ -18,6 +18,9 @@ class ProductTemplate(models.Model):
         store=True,
         related='categ_id.show_hardware_properties',
     )
+    microsoft_office_mail = fields.Char(
+        string="Microsoft Office Mail",
+    )
     cpu = fields.Char(
         string='CPU',
     )
