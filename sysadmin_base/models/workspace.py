@@ -177,4 +177,3 @@ class WorkspaceItem(models.Model):
         name = fields.Char(
             string='Name'
         )
-        
