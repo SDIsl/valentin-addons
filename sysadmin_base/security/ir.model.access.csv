@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-sysadmin_group_workspaces_access,SysAdmin Workspace managing,model_workspace_workspace,sysadmin_base.group_sysadmin,1,1,1,1
-sysadmin_group_items_access,SysAdmin Items managing,model_workspace_item,sysadmin_base.group_sysadmin,1,1,1,1
-workspace_group_workspace_item_access,Workspaces Items using by Employees,model_workspace_item,sysadmin_base.group_workspace,1,1,0,0
-workspace_group_workspace_access,Workspaces view by Employees,model_workspace_workspace,sysadmin_base.group_workspace,1,0,0,0
+sysadmin_group_workspaces_access,SysAdmin Workspaces managing,model_workspace_workspace,sysadmin_base.group_sysadmin_sysadmin,1,1,1,1
+sysadmin_group_workspace_items_access,SysAdmin Workspace Items managing,model_workspace_item,sysadmin_base.group_sysadmin_sysadmin,1,1,1,1
+sysadmin_group_item_subsidies_access,SysAdmin Items Subsidies managing,model_workspace_item_subsidy,sysadmin_base.group_sysadmin_sysadmin,1,1,1,1
+employee_group_workspace_items_access,Employees Workspaces Items view and modify,model_workspace_item,sysadmin_base.group_sysadmin_employee,1,1,0,0
+employee_group_workspaces_access,Employees Workspaces view,model_workspace_workspace,sysadmin_base.group_sysadmin_employee,1,0,0,0

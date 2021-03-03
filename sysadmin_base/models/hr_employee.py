@@ -1,7 +1,7 @@
 ###############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ###############################################################################
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class HrEmployee(models.Model):
@@ -20,13 +20,8 @@ class HrEmployee(models.Model):
        'workspace_id',
        string='Workspaces',
     )
-
-    def employee_item_count(self):
-        return{
-            'name': 'Items',
-            'view_type': 'form',
-            'view_mode': 'tree,form',
-            'res_model': 'workspace.item',
-            'type': 'ir.actions.act_window',
-            'domain': [('workspace_id', 'in', self.workspace_ids.ids)]
-        }
+    item_ids = fields.One2many(
+        'workspace.item',
+        'employee_id',
+        string='Items',
+    )

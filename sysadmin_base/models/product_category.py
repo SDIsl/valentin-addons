@@ -9,7 +9,7 @@ class ProductCategory(models.Model):
 
     show_hardware_properties = fields.Boolean(
         string='Hardware properties',
-        help='Show hardware properties on product',
+        help='Show hardware properties on item',
     )
 
     @api.onchange('show_hardware_properties')

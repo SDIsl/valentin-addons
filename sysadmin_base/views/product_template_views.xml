@@ -27,15 +27,6 @@
                     <group>
                         <group name="general_information" string="General Information">
                             <field name="information"/>
-                            <field name="hardware_properties" invisible="1"/>
-                        </group>
-                        <group name="hardware_properties" string="Hardware Properties" attrs="{'invisible':[('hardware_properties','=',False)]}">
-                            <field name="microsoft_office_mail"/>
-                            <field name="cpu" placeholder="iX-XXXXNN / AMD XXXXX X / etc"/>
-                            <field name="ram"/>
-                            <field name="data_storage" placeholder="1TB-HDD / 512GB-SSD"/>
-                            <field name="ip" placeholder="X.X.X.X"/>
-                            <field name="os_version"/>
                         </group>
                     </group>
                 </page>

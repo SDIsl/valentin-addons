@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data noupdate="0">
-        <record id="group_sysadmin" model="res.groups">
-            <field name="name">SysAdmin Application using</field>
+        <record id="group_sysadmin_sysadmin" model="res.groups">
+            <field name="name">SysAdmin / SysAdmin</field>
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
-        <record id="group_workspace" model="res.groups">
-            <field name="name">Workspaces Items using</field>
+        <record id="group_sysadmin_employee" model="res.groups">
+            <field name="name">SysAdmin / Employee</field>
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
     </data>
