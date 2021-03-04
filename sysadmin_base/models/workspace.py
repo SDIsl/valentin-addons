@@ -23,7 +23,7 @@ class Workspace(models.Model):
         compute='_compute_item_count',
     )
     employee_count = fields.Integer(
-        'Employees',
+        'Employee Count',
         compute='_compute_employee_count',
     )
     employee_ids = fields.Many2many(
@@ -84,7 +84,8 @@ class WorkspaceItem(models.Model):
     )
     hardware_properties = fields.Boolean(
         readonly=True,
-        compute='_compute_hardware_properties',
+        store=True,
+        related='product_id.categ_id.show_hardware_properties',
     )
     cpu = fields.Char(
         string='CPU',
@@ -138,15 +139,6 @@ class WorkspaceItem(models.Model):
         'hr.employee',
         'Employee',
     )
-
-    @api.one
-    @api.depends(
-        'product_id.categ_id.show_hardware_properties',
-        'product_id.internal_equipment'
-    )
-    def _compute_hardware_properties(self):
-        s_h_p = self.product_id.categ_id.show_hardware_properties
-        self.hardware_properties = s_h_p
 
     @api.model
     def _expand_workspace_ids(self, workspaces, domain, order):

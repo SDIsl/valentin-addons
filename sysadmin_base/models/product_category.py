@@ -18,3 +18,14 @@ class ProductCategory(models.Model):
             self.env['product.template'].search([
                 ('categ_id.id', '=', self._origin.id),
             ]).write({'internal_equipment': True})
+        else:
+            self.env['workspace.item'].search([
+                ('product_id.categ_id.id', '=', self._origin.id),
+            ]).write({
+                'cpu': False,
+                'ram': False,
+                'data_storage': False,
+                'ip': False,
+                'os_version': False,
+                'microsoft_office_mail': False
+            })
