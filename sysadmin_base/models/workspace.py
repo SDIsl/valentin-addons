@@ -13,7 +13,7 @@ class Workspace(models.Model):
         required=True,
     )
     description = fields.Char(
-        string="Description",
+        string='Description',
     )
     location = fields.Char(
         string='Location',
@@ -69,10 +69,10 @@ class WorkspaceItem(models.Model):
         required=True,
     )
     description = fields.Text(
-        string="Description",
+        string='Description',
     )
     sn = fields.Char(
-        string="Serial Number",
+        string='Serial Number',
         copy=False,
     )
     _sql_constraints = [
@@ -116,7 +116,7 @@ class WorkspaceItem(models.Model):
         string='OS Version',
     )
     microsoft_office_mail = fields.Char(
-        string="Microsoft Office Mail",
+        string='Microsoft Office Mail',
     )
     product_id = fields.Many2one(
         'product.template',
@@ -130,7 +130,7 @@ class WorkspaceItem(models.Model):
         group_expand='_expand_workspace_ids',
     )
     workspace_location = fields.Char(
-        string="Workspace location",
+        string='Workspace location',
         readonly=True,
         store=True,
         related='workspace_id.location',
@@ -160,12 +160,17 @@ class WorkspaceItem(models.Model):
         _name = 'workspace.item.subsidy'
         _description = 'Subsidy'
 
+        name = fields.Char(
+            string='Name'
+        )
+        description = fields.Char(
+            string='Description',
+        )
+        date = fields.Date(
+            string='Date',
+        )
         item_ids = fields.One2many(
             'workspace.item',
             'subsidy_id',
             string='Items'
-        )
-
-        name = fields.Char(
-            string='Name'
         )
