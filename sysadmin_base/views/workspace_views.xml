@@ -55,7 +55,7 @@
         <field name="name">workspace.workspace.view.kanban</field>
         <field name="model">workspace.workspace</field>
         <field name="arch" type="xml">
-            <kanban string="Workspaces">
+            <kanban string="Workspaces" default_group_by="location">
                 <field name="name"/>
                 <field name="item_count"/>
                 <field name="location"/>
