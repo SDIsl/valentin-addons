@@ -19,7 +19,7 @@ class ProductTemplate(models.Model):
         related='categ_id.show_hardware_properties',
     )
     item_count = fields.Integer(
-        'Items',
+        string='Items',
         compute='_compute_item_count',
     )
 
@@ -43,5 +43,5 @@ class ProductTemplate(models.Model):
             'res_model': 'workspace.item',
             'type': 'ir.actions.act_window',
             'context': {'default_product_id': self.id},
-            'domain': [('product_id', '=', self.id)]
+            'domain': [('product_id', '=', self.id)],
         }

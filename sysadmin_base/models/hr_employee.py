@@ -1,7 +1,7 @@
 ###############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ###############################################################################
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class HrEmployee(models.Model):
@@ -14,14 +14,14 @@ class HrEmployee(models.Model):
         string='Is trainee',
     )
     workspace_ids = fields.Many2many(
-       'workspace.workspace',
-       'employee_workspace_rel',
-       'employee_id',
-       'workspace_id',
-       string='Workspaces',
+        comodel_name='workspace.workspace',
+        relation='employee_workspace_rel',
+        column1='employee_id',
+        column2='workspace_id',
+        string='Workspaces',
     )
     item_ids = fields.One2many(
-        'workspace.item',
-        'employee_id',
+        comodel_name='workspace.item',
+        inverse_name='employee_id',
         string='Items',
     )

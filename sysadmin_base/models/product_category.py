@@ -27,5 +27,5 @@ class ProductCategory(models.Model):
                 'data_storage': False,
                 'ip': False,
                 'os_version': False,
-                'microsoft_office_mail': False
+                'microsoft_office_mail': False,
             })

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="workspace_workspace_view_tree" model="ir.ui.view">
+        <field name="model">workspace.workspace</field>
+        <field name="arch" type="xml">
+            <tree string="Workspace">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="location"/>
+                <field name="item_ids"/>
+                <field name="employee_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="workspace_workspace_view_form" model="ir.ui.view">
+        <field name="model">workspace.workspace</field>
+        <field name="arch" type="xml">
+            <form string="Workspace">
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="description"/>
+                        <field name="location"/>
+                    </group>
+                    <notebook>
+                        <page string="Items" name="workspace_items">
+                            <field name="item_ids" context="{'default_workspace_id': active_id}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                    <field name="sn"/>
+                                    <field name="product_id"/>
+                                    <field name="subsidy_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Employees" name="workspace_employees">
+                            <field name="employee_ids" context="{'default_workspace_id': active_id}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="has_dialoga_access"/>
+                                    <field name="is_trainee"/>
+                                    <field name="work_location"/>
+                                    <field name="work_email"/>
+                                    <field name="item_ids"/>
+                                    <field name="workspace_ids"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="workspace_workspace_view_kanban" model="ir.ui.view">
+        <field name="model">workspace.workspace</field>
+        <field name="arch" type="xml">
+            <kanban string="Workspaces" default_group_by="location">
+                <field name="name"/>
+                <field name="item_ids"/>
+                <field name="employee_count"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_content">
+                                <h3>
+                                    <field name="name"/>
+                                </h3>
+                                <div attrs="{'invisible':[('item_ids','=',())]}">
+                                    <b>Items:</b>
+                                    <field name="item_ids"/>
+                                </div>
+                                <div attrs="{'invisible':[('employee_count','=',0)]}">
+                                    <b>Employees:</b>
+                                    <field name="employee_count"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="workspace_workspace_view_search" model="ir.ui.view">
+        <field name="model">workspace.workspace</field>
+        <field name="arch" type="xml">
+            <search string="Workspaces">
+                <filter string="Location" name="workspace_location" context="{'group_by':'location'}"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>

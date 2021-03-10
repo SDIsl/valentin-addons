@@ -36,7 +36,9 @@
         'views/product_category_views.xml',
         'views/product_template_views.xml',
         'views/sysadmin_menu_views.xml',
-        'views/workspace_views.xml',
+        'views/workspace_item_subsidy_views.xml',
+        'views/workspace_item_views.xml',
+        'views/workspace_workspace_views.xml',
     ],
     'application': True,
 }

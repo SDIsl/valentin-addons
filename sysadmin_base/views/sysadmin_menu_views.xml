@@ -58,6 +58,6 @@
     <menuitem id="menu_workspaces" name="Workspaces" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_workspaces" sequence="3"/>
     <menuitem id="menu_items" name="Items" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_items" sequence="4"/>
     <menuitem id="menu_subsidies" name="Subsidies" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_subsidies" sequence="5"/>
-    <menuitem id="menu_employee_workspace_items" name="My Workspace Items" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin,group_sysadmin_employee" action="action_list_employee_workspace_items" sequence="6"/>
+    <menuitem id="menu_employee_workspace_items" name="My Workspace Items" parent="menu_sysadmin_root" groups="group_sysadmin_employee" action="action_list_employee_workspace_items" sequence="6"/>
 
 </odoo>
