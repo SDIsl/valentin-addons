@@ -22,12 +22,12 @@ class Workspace(models.Model):
     )
     workspace_id = fields.Many2one(
         comodel_name='workspace.workspace',
-        string='Workspace'
+        string='Workspace',
     )
     workspace_ids = fields.One2many(
         comodel_name='workspace.workspace',
         inverse_name='workspace_id',
-        string='Workspaces'
+        string='Workspaces',
     )
     name = fields.Char(
         string='Name',
@@ -63,7 +63,7 @@ class Workspace(models.Model):
         internal_workspaces = self.workspace_ids
         if len(self.workspace_ids) > 0:
             for workspace in self.workspace_ids:
-                    internal_workspaces += workspace._internal_workspaces()
+                internal_workspaces += workspace._internal_workspaces()
         return internal_workspaces
 
     @api.one
@@ -94,7 +94,6 @@ class Workspace(models.Model):
             for employee in self.employee_ids:
                 for item in employee.item_ids:
                     self.employee_item_count += item.count
-
 
     def button_employee_item_count(self):
         return{
