@@ -22,6 +22,9 @@ class WorkspaceItem(models.Model):
     description = fields.Text(
         string='Description',
     )
+    count = fields.Integer(
+        string='Count',
+    )
     sn = fields.Char(
         string='Serial Number',
         copy=False,
@@ -90,12 +93,23 @@ class WorkspaceItem(models.Model):
         comodel_name='hr.employee',
         string='Employee',
     )
+    employee_location = fields.Char(
+        string='Employee location',
+        readonly=True,
+        store=True,
+        related='employee_id.work_location',
+    )
 
     @api.model
     def _expand_workspace_ids(self, workspaces, domain, order):
         return self.env['workspace.workspace'].search([
             ('employee_ids.user_id', '=', self.env.uid)
         ])
+
+    @api.onchange('product_id')
+    def _onchange_product_id(self):
+        if self.product_id:
+            self.name = self.product_id.name
 
     @api.onchange('workspace_id')
     def _check_workspace(self):
@@ -106,3 +120,15 @@ class WorkspaceItem(models.Model):
     def _check_employee(self):
         if self.employee_id:
             self.workspace_id = False
+
+    @api.onchange('count')
+    def _onchange_count(self):
+        if self.count and self.count > 1 or self.count < 0:
+            self.sn = False
+        if self.count < 0:
+            self.count = 0
+
+    @api.onchange('sn')
+    def _onchange_sn(self):
+        if self.sn:
+            self.count = 1

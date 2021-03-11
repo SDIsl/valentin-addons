@@ -25,3 +25,13 @@ class HrEmployee(models.Model):
         inverse_name='employee_id',
         string='Items',
     )
+
+    def button_employee_items(self):
+        return{
+            'name': 'My Items',
+            'view_type': 'form',
+            'view_mode': 'tree',
+            'res_model': 'workspace.item',
+            'type': 'ir.actions.act_window',
+            'domain': [('employee_id', '=', self.id)],
+        }

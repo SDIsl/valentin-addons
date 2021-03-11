@@ -47,17 +47,16 @@
         <field name="domain">[('workspace_id.employee_ids.user_id', '=', uid)]</field>
     </record>
 
+    <menuitem id="menu_sysadmin_root" name="SysAdmin" groups="group_sysadmin_sysadmin"/>
 
-    <menuitem id="menu_sysadmin_root" name="SysAdmin" groups="group_sysadmin_sysadmin,group_sysadmin_employee"/>
-
-    <menuitem id="menu_sysadmin_products" name="Products" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" sequence="1"/>
-    <menuitem id="menu_internal_equipment_products" name="Catalogue" parent="menu_sysadmin_products" groups="group_sysadmin_sysadmin" action="action_list_catalogue" sequence="1"/>
-    <menuitem id="menu_sysadmin_product_category" name="Product categories" parent="menu_sysadmin_products" groups="group_sysadmin_sysadmin" action="action_list_categories" sequence="2"/>
+    <menuitem id="menu_sysadmin_products" name="Products" parent="menu_sysadmin_root" sequence="1"/>
+    <menuitem id="menu_internal_equipment_products" name="Catalogue" parent="menu_sysadmin_products" action="action_list_catalogue" sequence="1"/>
+    <menuitem id="menu_sysadmin_product_category" name="Product categories" parent="menu_sysadmin_products" action="action_list_categories" sequence="2"/>
     
-    <menuitem id="menu_employees" name="Employees" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_employees" sequence="2"/>
-    <menuitem id="menu_workspaces" name="Workspaces" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_workspaces" sequence="3"/>
-    <menuitem id="menu_items" name="Items" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_items" sequence="4"/>
-    <menuitem id="menu_subsidies" name="Subsidies" parent="menu_sysadmin_root" groups="group_sysadmin_sysadmin" action="action_list_subsidies" sequence="5"/>
-    <menuitem id="menu_employee_workspace_items" name="My Workspace Items" parent="menu_sysadmin_root" groups="group_sysadmin_employee" action="action_list_employee_workspace_items" sequence="6"/>
+    <menuitem id="menu_employees" name="Employees" parent="menu_sysadmin_root" action="action_list_employees" sequence="2"/>
+    <menuitem id="menu_workspaces" name="Workspaces" parent="menu_sysadmin_root" action="action_list_workspaces" sequence="3"/>
+    <menuitem id="menu_items" name="Items" parent="menu_sysadmin_root" action="action_list_items" sequence="4"/>
+    <menuitem id="menu_subsidies" name="Subsidies" parent="menu_sysadmin_root" action="action_list_subsidies" sequence="5"/>
+    <menuitem id="menu_employee_workspace_items" name="My Workspace Items" parent="menu_sysadmin_root" action="action_list_employee_workspace_items" sequence="6"/>
 
 </odoo>

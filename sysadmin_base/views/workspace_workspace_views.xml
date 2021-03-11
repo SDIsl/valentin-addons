@@ -8,8 +8,12 @@
                 <field name="name"/>
                 <field name="description"/>
                 <field name="location"/>
+                <field name="workspace_id"/>
                 <field name="item_ids"/>
                 <field name="employee_ids"/>
+                <field name="employee_item_count"/>
+                <field name="workspace_ids"/>
+                <field name="internal_item_count"/>
             </tree>
         </field>
     </record>
@@ -19,6 +23,24 @@
         <field name="arch" type="xml">
             <form string="Workspace">
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="button_employee_item_count" icon="fa-th-list" type="object" attrs="{'invisible':[('employee_item_count','=',0)]}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="employee_item_count"/>
+                                </span>
+                                <span class="o_stat_text">Employee Items</span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" name="button_internal_item_count" icon="fa-th-list" type="object" attrs="{'invisible':[('internal_item_count','=',0)]}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="internal_item_count"/>
+                                </span>
+                                <span class="o_stat_text">Internal Items</span>
+                            </div>
+                        </button>
+                    </div>
                     <h1>
                         <field name="name"/>
                     </h1>
@@ -26,12 +48,16 @@
                         <field name="description"/>
                         <field name="location"/>
                     </group>
+                    <group>
+                        <field name="workspace_id"/>
+                    </group>
                     <notebook>
                         <page string="Items" name="workspace_items">
                             <field name="item_ids" context="{'default_workspace_id': active_id}">
                                 <tree>
                                     <field name="name"/>
                                     <field name="description"/>
+                                    <field name="count"/>
                                     <field name="sn"/>
                                     <field name="product_id"/>
                                     <field name="subsidy_id"/>
@@ -51,6 +77,20 @@
                                 </tree>
                             </field>
                         </page>
+                        <page string="Workspaces" name="workspace_workspaces">
+                            <field name="workspace_ids" context="{'default_workspace_id': active_id}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                    <field name="location"/>
+                                    <field name="item_ids"/>
+                                    <field name="employee_ids"/>
+                                    <field name="employee_item_count"/>
+                                    <field name="workspace_ids"/>
+                                    <field name="internal_item_count"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
@@ -62,8 +102,11 @@
         <field name="arch" type="xml">
             <kanban string="Workspaces" default_group_by="location">
                 <field name="name"/>
+                <field name="workspace_id"/>
                 <field name="item_ids"/>
+                <field name="internal_item_count"/>
                 <field name="employee_count"/>
+                <field name="workspace_ids"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click">
@@ -76,8 +119,27 @@
                                     <field name="item_ids"/>
                                 </div>
                                 <div attrs="{'invisible':[('employee_count','=',0)]}">
+                                    <p/>
                                     <b>Employees:</b>
                                     <field name="employee_count"/>
+                                </div>
+                                <div attrs="{'invisible':[('employee_item_count','=',0)]}">
+                                    <b>Employee Item Count:</b>
+                                    <field name="employee_item_count"/>
+                                </div>
+                                <div attrs="{'invisible':[('workspace_id','=',False)]}">
+                                    <p/>
+                                    <b>Workspace parent:</b>
+                                    <field name="workspace_id"/>
+                                </div>
+                                <div attrs="{'invisible':[('workspace_ids','=',())]}">
+                                    <p/>
+                                    <b>Workspaces:</b>
+                                    <field name="workspace_ids"/>
+                                </div>
+                                <div attrs="{'invisible':[('internal_item_count','&lt;',1)]}">
+                                    <b>Internal Item Count:</b>
+                                    <field name="internal_item_count"/>
                                 </div>
                             </div>
                         </div>
@@ -92,6 +154,7 @@
         <field name="arch" type="xml">
             <search string="Workspaces">
                 <filter string="Location" name="workspace_location" context="{'group_by':'location'}"/>
+                <filter string="Workspaces" name="workspace_workspaces" context="{'group_by':'workspace_id'}"/>
             </search>
         </field>
     </record>

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-10 17:04+0000\n"
-"PO-Revision-Date: 2021-03-10 17:04+0000\n"
+"POT-Creation-Date: 2021-03-11 16:48+0000\n"
+"PO-Revision-Date: 2021-03-11 16:48+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -91,9 +91,24 @@ msgid "96 GB"
 msgstr ""
 
 #. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
+msgid "<b>Count:</b>"
+msgstr "<b>Cantidad:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Employee Item Count:</b>"
+msgstr "<b>Cantidad de elementos de empleados:</b>"
+
+#. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
 msgid "<b>Employees:</b>"
 msgstr "<b>Empleados:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Internal Item Count:</b>"
+msgstr "<b>Cantidad de elementos internos:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
@@ -102,20 +117,43 @@ msgstr "<b>Elementos:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
-msgid "<b>SN:</b>"
-msgstr "<b>SN:</b>"
+msgid "<b>Location:</b>"
+msgstr "<b>Ubicación:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
-msgid "<br/>\n"
-"                                <b>Workspace location:</b>"
-msgstr "<br/>\n"
-"                                <b>Ubicación espacio de trabajo:</b>"
+msgid "<b>SN:</b>"
+msgstr "<b>Número de Serie:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Workspace parent:</b>"
+msgstr "<b>Espacio de trabajo padre:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Workspaces:</b>"
+msgstr "<b>Espacios de trabajo:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "<span class=\"o_stat_text\">Employee Items</span>"
+msgstr "<span class=\"o_stat_text\">Elementos de empleados</span>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "<span class=\"o_stat_text\">Internal Items</span>"
+msgstr "<span class=\"o_stat_text\">Elementos internos</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
 msgid "<span class=\"o_stat_text\">Items</span>"
 msgstr "<span class=\"o_stat_text\">Elementos</span>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
+msgid "<span class=\"o_stat_text\">My Items</span>"
+msgstr "<span class=\"o_stat_text\">Mis elementos</span>"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__cpu
@@ -127,6 +165,11 @@ msgstr ""
 #: model:ir.ui.menu,name:sysadmin_base.menu_internal_equipment_products
 msgid "Catalogue"
 msgstr "Catálogo"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__count
+msgid "Count"
+msgstr "Cantidad"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__create_uid
@@ -170,7 +213,6 @@ msgstr "Nombre mostrado"
 #: model:ir.model,name:sysadmin_base.model_hr_employee
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__employee_id
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
-#: model:res.groups,name:sysadmin_base.group_sysadmin_employee
 msgid "Employee"
 msgstr "Empleado"
 
@@ -178,6 +220,16 @@ msgstr "Empleado"
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_count
 msgid "Employee Count"
 msgstr "Nº de empleados"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_item_count
+msgid "Employee Item Count"
+msgstr "Cantidad de elementos de empleados"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__employee_location
+msgid "Employee location"
+msgstr "Ubicación del empleado"
 
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_employees
@@ -234,6 +286,11 @@ msgstr "Información"
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_form_view_stock
 msgid "Internal Equipment"
 msgstr "Equipo interno"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__internal_item_count
+msgid "Internal Item Count"
+msgstr "Cantidad de elementos internos"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
@@ -399,11 +456,6 @@ msgid "Technical Properties"
 msgstr "Características técnicas"
 
 #. module: sysadmin_base
-#: model:res.groups,comment:sysadmin_base.group_sysadmin_employee
-msgid "The user will be able to move it's items between it's workspaces."
-msgstr "El usuario podrá mover sus elementos entre sus espacios de trabajo"
-
-#. module: sysadmin_base
 #: model:res.groups,comment:sysadmin_base.group_sysadmin_sysadmin
 msgid "The user will have access to all configuration of SysAdmin."
 msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
@@ -411,6 +463,7 @@ msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_workspace_workspace
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__workspace_id
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__workspace_id
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_tree
 msgid "Workspace"
@@ -424,9 +477,11 @@ msgstr "Ubicación del espacio de trabajo"
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_workspaces
 #: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee__workspace_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__workspace_ids
 #: model:ir.ui.menu,name:sysadmin_base.menu_workspaces
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_search
 msgid "Workspaces"

@@ -17,7 +17,9 @@
             <kanban string="Items" default_group_by="workspace_id">
                 <field name="name"/>
                 <field name="sn"/>
+                <field name="count"/>
                 <field name="workspace_location"/>
+                <field name="employee_location"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click">
@@ -25,11 +27,17 @@
                                 <h3>
                                     <field name="name"/>
                                 </h3>
-                                <b>SN:</b>
-                                <field name="sn"/>
-                                <br/>
-                                <b>Workspace location:</b>
-                                <field name="workspace_location"/>
+                                <div attrs="{'invisible':[('sn','=',False)]}">
+                                    <b>SN:</b>
+                                    <field name="sn"/>
+                                </div>
+                                <div attrs="{'invisible':[('count','=',False)]}">
+                                    <b>Count:</b>
+                                    <field name="count"/>
+                                </div>
+                                <b>Location:</b>
+                                <field name="workspace_location" attrs="{'invisible':[('workspace_location','=',False)]}"/>
+                                <field name="employee_location" attrs="{'invisible':[('employee_location','=',False)]}"/>
                             </div>
                         </div>
                     </t>
@@ -44,11 +52,13 @@
             <tree string="Item">
                 <field name="name"/>
                 <field name="description"/>
+                <field name="count"/>
                 <field name="sn"/>
                 <field name="product_id"/>
                 <field name="workspace_id"/>
                 <field name="workspace_location"/>
                 <field name="employee_id"/>
+                <field name="employee_location"/>
                 <field name="subsidy_id"/>
                 <field name="cpu"/>
                 <field name="ram"/>
@@ -68,25 +78,35 @@
                     <h1>
                         <field name="name"/>
                     </h1>
-                    <group>
-                        <group string="Information">
-                            <field name="description"/>
+                    <group string="Information">
+                        <field name="description"/>
+                        <group>
+                            <field name="count"/>
                             <field name="sn"/>
+                        </group>
+                        <group>
                             <field name="product_id"/>
+                        </group>
+                        <group>
                             <field name="workspace_id"/>
                             <field name="workspace_location"/>
+                        </group>
+                        <group>
                             <field name="employee_id"/>
+                            <field name="employee_location"/>
+                        </group>
+                        <group>
                             <field name="subsidy_id"/>
                         </group>
-                        <field name="hardware_properties" invisible="1"/>
-                        <group name="show_hardware_properties" string="Hardware Properties" attrs="{'invisible':[('hardware_properties','=',False)]}">
-                            <field name="cpu" placeholder="iX-XXXXNN / AMD XXXXX X / etc"/>
-                            <field name="ram"/>
-                            <field name="data_storage" placeholder="1TB-HDD / 512GB-SSD"/>
-                            <field name="ip" placeholder="X.X.X.X"/>
-                            <field name="os_version"/>
-                            <field name="microsoft_office_mail"/>
-                        </group>
+                    </group>
+                    <field name="hardware_properties" invisible="1"/>
+                    <group name="show_hardware_properties" string="Hardware Properties" attrs="{'invisible':[('hardware_properties','=',False)]}">
+                        <field name="cpu" placeholder="iX-XXXXNN / AMD XXXXX X / etc"/>
+                        <field name="ram"/>
+                        <field name="data_storage" placeholder="1TB-HDD / 512GB-SSD"/>
+                        <field name="ip" placeholder="X.X.X.X"/>
+                        <field name="os_version"/>
+                        <field name="microsoft_office_mail"/>
                     </group>
                 </sheet>
             </form>

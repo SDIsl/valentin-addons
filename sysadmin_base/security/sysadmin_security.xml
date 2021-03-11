@@ -7,10 +7,4 @@
         <field name="comment">The user will have access to all configuration of SysAdmin.</field>
     </record>
 
-    <record id="group_sysadmin_employee" model="res.groups">
-        <field name="name">Employee</field>
-        <field name="category_id" ref="base.module_category_sysadmin"/>
-        <field name="comment">The user will be able to move it's items between it's workspaces.</field>
-    </record>
-
 </odoo>
