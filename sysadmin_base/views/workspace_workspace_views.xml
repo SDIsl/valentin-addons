@@ -57,7 +57,7 @@
                                 <tree>
                                     <field name="name"/>
                                     <field name="description"/>
-                                    <field name="count"/>
+                                    <field name="amount"/>
                                     <field name="sn"/>
                                     <field name="product_id"/>
                                     <field name="subsidy_id"/>

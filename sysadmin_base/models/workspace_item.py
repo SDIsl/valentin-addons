@@ -22,8 +22,8 @@ class WorkspaceItem(models.Model):
     description = fields.Text(
         string='Description',
     )
-    count = fields.Integer(
-        string='Count',
+    amount = fields.Integer(
+        string='Amount',
     )
     sn = fields.Char(
         string='Serial Number',
@@ -121,12 +121,12 @@ class WorkspaceItem(models.Model):
         if self.employee_id:
             self.workspace_id = False
 
-    @api.onchange('count')
-    def _onchange_count(self):
-        if self.count and self.count > 1 or self.count < 0:
+    @api.onchange('amount')
+    def _onchange_amount(self):
+        if self.amount and self.amount > 1 or self.amount < 0:
             self.sn = False
-        if self.count < 0:
-            self.count = 0
+        if self.amount < 0:
+            self.amount = 0
 
     @api.onchange('sn')
     def _onchange_sn(self):
