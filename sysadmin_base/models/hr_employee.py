@@ -13,3 +13,25 @@ class HrEmployee(models.Model):
     is_trainee = fields.Boolean(
         string='Is trainee',
     )
+    workspace_ids = fields.Many2many(
+        comodel_name='workspace.workspace',
+        relation='employee_workspace_rel',
+        column1='employee_id',
+        column2='workspace_id',
+        string='Workspaces',
+    )
+    item_ids = fields.One2many(
+        comodel_name='workspace.item',
+        inverse_name='employee_id',
+        string='Items',
+    )
+
+    def button_employee_items(self):
+        return{
+            'name': 'My Items',
+            'view_type': 'form',
+            'view_mode': 'tree',
+            'res_model': 'workspace.item',
+            'type': 'ir.actions.act_window',
+            'domain': [('employee_id', '=', self.id)],
+        }

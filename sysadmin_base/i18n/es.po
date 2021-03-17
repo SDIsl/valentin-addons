@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-04 14:47+0000\n"
-"PO-Revision-Date: 2021-02-04 14:47+0000\n"
+"POT-Creation-Date: 2021-03-11 16:48+0000\n"
+"PO-Revision-Date: 2021-03-11 16:48+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,21 +16,228 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_product__cpu
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_template__cpu
-msgid "CPU"
-msgstr "Procesador"
+#: selection:workspace.item,ram:0
+msgid "10 GB"
+msgstr ""
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_product__data_storage
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_template__data_storage
+#: selection:workspace.item,ram:0
+msgid "12 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "128 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "16 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
+msgid "1TB-HDD / 512GB-SSD"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "2 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "20 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "24 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "32 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "4 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "48 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "6 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "64 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "8 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: selection:workspace.item,ram:0
+msgid "96 GB"
+msgstr ""
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
+msgid "<b>Count:</b>"
+msgstr "<b>Cantidad:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Employee Item Count:</b>"
+msgstr "<b>Cantidad de elementos de empleados:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Employees:</b>"
+msgstr "<b>Empleados:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Internal Item Count:</b>"
+msgstr "<b>Cantidad de elementos internos:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Items:</b>"
+msgstr "<b>Elementos:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
+msgid "<b>Location:</b>"
+msgstr "<b>Ubicación:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
+msgid "<b>SN:</b>"
+msgstr "<b>Número de Serie:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Workspace parent:</b>"
+msgstr "<b>Espacio de trabajo padre:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+msgid "<b>Workspaces:</b>"
+msgstr "<b>Espacios de trabajo:</b>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "<span class=\"o_stat_text\">Employee Items</span>"
+msgstr "<span class=\"o_stat_text\">Elementos de empleados</span>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "<span class=\"o_stat_text\">Internal Items</span>"
+msgstr "<span class=\"o_stat_text\">Elementos internos</span>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
+msgid "<span class=\"o_stat_text\">Items</span>"
+msgstr "<span class=\"o_stat_text\">Elementos</span>"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
+msgid "<span class=\"o_stat_text\">My Items</span>"
+msgstr "<span class=\"o_stat_text\">Mis elementos</span>"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__cpu
+msgid "CPU"
+msgstr ""
+
+#. module: sysadmin_base
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_catalogue
+#: model:ir.ui.menu,name:sysadmin_base.menu_internal_equipment_products
+msgid "Catalogue"
+msgstr "Catálogo"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__count
+msgid "Count"
+msgstr "Cantidad"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__create_uid
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__create_uid
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__create_date
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__create_date
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__data_storage
 msgid "Data storage"
-msgstr "Discos de almacenamiento"
+msgstr "Almacenamiento de datos"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__description
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__description
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__display_name
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__display_name
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
 
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_hr_employee
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__employee_id
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
 msgid "Employee"
 msgstr "Empleado"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_count
+msgid "Employee Count"
+msgstr "Nº de empleados"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_item_count
+msgid "Employee Item Count"
+msgstr "Cantidad de elementos de empleados"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__employee_location
+msgid "Employee location"
+msgstr "Ubicación del empleado"
+
+#. module: sysadmin_base
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_employees
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_ids
+#: model:ir.ui.menu,name:sysadmin_base.menu_employees
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "Employees"
+msgstr "Empleados"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
@@ -38,14 +245,15 @@ msgid "General Information"
 msgstr "Información General"
 
 #. module: sysadmin_base
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
 msgid "Hardware Properties"
-msgstr "Propiedades de Hardware"
+msgstr "Propiedades de hardware"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_category__show_hardware_properties
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__hardware_properties
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_template__hardware_properties
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__hardware_properties
 msgid "Hardware properties"
 msgstr "Propiedades de hardware"
 
@@ -56,26 +264,38 @@ msgid "Has Dialoga access"
 msgstr "Tiene acceso a Dialoga"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_product__ip
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_template__ip
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__id
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__id
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__id
+msgid "ID"
+msgstr ""
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__ip
 msgid "IP"
-msgstr "Dirección IP"
+msgstr ""
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__information
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_template__information
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
 msgid "Information"
 msgstr "Información"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_form_view_stock
 msgid "Internal Equipment"
-msgstr "Equipo Interno"
+msgstr "Equipo interno"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__internal_item_count
+msgid "Internal Item Count"
+msgstr "Cantidad de elementos internos"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
 msgid "Internal Tools"
-msgstr "Herramientas Internas"
+msgstr "Herramientas internas"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__internal_equipment
@@ -90,10 +310,81 @@ msgid "Is trainee"
 msgstr "En prácticas"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_product__os_version
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_template__os_version
+#: model:ir.model,name:sysadmin_base.model_workspace_item
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_tree
+msgid "Item"
+msgstr "Elemento"
+
+#. module: sysadmin_base
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_items
+#: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee__item_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_product_product__item_count
+#: model:ir.model.fields,field_description:sysadmin_base.field_product_template__item_count
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__item_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__item_ids
+#: model:ir.ui.menu,name:sysadmin_base.menu_items
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "Items"
+msgstr "Elementos"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item____last_update
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy____last_update
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__write_uid
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__write_uid
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__write_date
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__write_date
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__location
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_search
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__microsoft_office_mail
+msgid "Microsoft Office Mail"
+msgstr "Correo de Microsoft Office"
+
+#. module: sysadmin_base
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_employee_workspace_items
+#: model:ir.ui.menu,name:sysadmin_base.menu_employee_workspace_items
+msgid "My Workspace Items"
+msgstr "Elementos de mis espacios de trabajo"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__name
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__name
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__os_version
 msgid "OS Version"
-msgstr "Versión del Sistema Operativo"
+msgstr "Versión Sistema Operativo"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__product_id
+msgid "Product"
+msgstr "Producto"
 
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_product_category
@@ -106,19 +397,102 @@ msgid "Product Template"
 msgstr "Plantilla de producto"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_product__ram
-#: model:ir.model.fields,field_description:sysadmin_base.field_product_template__ram
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_categories
+#: model:ir.ui.menu,name:sysadmin_base.menu_sysadmin_product_category
+msgid "Product categories"
+msgstr "Categorías de productos"
+
+#. module: sysadmin_base
+#: model:ir.ui.menu,name:sysadmin_base.menu_sysadmin_products
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
+msgid "Products"
+msgstr "Productos"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__ram
 msgid "RAM"
-msgstr "Memoria RAM"
+msgstr ""
+
+#. module: sysadmin_base
+#: sql_constraint:workspace.item:0
+msgid "SN already exists!"
+msgstr "¡Ya existe el Nº de serie!"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__sn
+msgid "Serial Number"
+msgstr "Número de Serie"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,help:sysadmin_base.field_product_category__show_hardware_properties
 #: model:ir.model.fields,help:sysadmin_base.field_product_product__hardware_properties
 #: model:ir.model.fields,help:sysadmin_base.field_product_template__hardware_properties
-msgid "Show hardware properties on product"
-msgstr "Mostrar propiedades de hardware en los productos de la categoría"
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__hardware_properties
+msgid "Show hardware properties on item"
+msgstr "Mostrar propiedades de hardware en elemento"
+
+#. module: sysadmin_base
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_subsidies
+#: model:ir.ui.menu,name:sysadmin_base.menu_subsidies
+msgid "Subsidies"
+msgstr "Subvenciones"
+
+#. module: sysadmin_base
+#: model:ir.model,name:sysadmin_base.model_workspace_item_subsidy
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__subsidy_id
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_subsidy_view_form
+msgid "Subsidy"
+msgstr "Subvención"
+
+#. module: sysadmin_base
+#: model:ir.ui.menu,name:sysadmin_base.menu_sysadmin_root
+#: model:res.groups,name:sysadmin_base.group_sysadmin_sysadmin
+msgid "SysAdmin"
+msgstr ""
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
 msgid "Technical Properties"
-msgstr "Características Ténicas"
+msgstr "Características técnicas"
+
+#. module: sysadmin_base
+#: model:res.groups,comment:sysadmin_base.group_sysadmin_sysadmin
+msgid "The user will have access to all configuration of SysAdmin."
+msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
+
+#. module: sysadmin_base
+#: model:ir.model,name:sysadmin_base.model_workspace_workspace
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__workspace_id
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__workspace_id
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_tree
+msgid "Workspace"
+msgstr "Espacio de trabajo"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__workspace_location
+msgid "Workspace location"
+msgstr "Ubicación del espacio de trabajo"
+
+#. module: sysadmin_base
+#: model:ir.actions.act_window,name:sysadmin_base.action_list_workspaces
+#: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee__workspace_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__workspace_ids
+#: model:ir.ui.menu,name:sysadmin_base.menu_workspaces
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_search
+msgid "Workspaces"
+msgstr "Espacios de trabajo"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
+msgid "X.X.X.X"
+msgstr ""
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
+msgid "iX-XXXXNN / AMD XXXXX X / etc"
+msgstr ""

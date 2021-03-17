@@ -18,20 +18,27 @@
 #
 ###############################################################################
 {
-    'name': 'Sysadmin Base',
-    'summary': 'Module for sysadmin using.',
+    'name': 'SysAdmin Base',
+    'summary': 'Module for SysAdmin using.',
     'author': 'Valentín Castravete Georgian, SDi Soluciones Informáticas',
     'website': 'https://sdi.web.sdi.es/odoo/',
     'license': 'AGPL-3',
-    'category': 'Stock',
+    'category': 'SysAdmin',
     'version': '12.0.1.0.0',
     'depends': [
         'hr',
         'stock',
     ],
     'data': [
+        'security/sysadmin_security.xml',
+        'security/ir.model.access.csv',
         'views/hr_employee_views.xml',
         'views/product_category_views.xml',
         'views/product_template_views.xml',
-    ]
+        'views/sysadmin_menu_views.xml',
+        'views/workspace_item_subsidy_views.xml',
+        'views/workspace_item_views.xml',
+        'views/workspace_workspace_views.xml',
+    ],
+    'application': True,
 }
