@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 16:48+0000\n"
-"PO-Revision-Date: 2021-03-11 16:48+0000\n"
+"POT-Creation-Date: 2021-03-17 08:27+0000\n"
+"PO-Revision-Date: 2021-03-17 08:27+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -93,7 +93,7 @@ msgstr ""
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
 msgid "<b>Count:</b>"
-msgstr "<b>Cantidad:</b>"
+msgstr "<b>Recuento:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
@@ -137,13 +137,13 @@ msgstr "<b>Espacios de trabajo:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
-msgid "<span class=\"o_stat_text\">Employee Items</span>"
-msgstr "<span class=\"o_stat_text\">Elementos de empleados</span>"
+msgid "<span class=\"o_stat_text\">Employees Items</span>"
+msgstr "<span class=\"o_stat_text\">Elem. de empleados</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
 msgid "<span class=\"o_stat_text\">Internal Items</span>"
-msgstr "<span class=\"o_stat_text\">Elementos internos</span>"
+msgstr "<span class=\"o_stat_text\">Elem. internos</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
@@ -152,8 +152,8 @@ msgstr "<span class=\"o_stat_text\">Elementos</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
-msgid "<span class=\"o_stat_text\">My Items</span>"
-msgstr "<span class=\"o_stat_text\">Mis elementos</span>"
+msgid "<span class=\"o_stat_text\">Employee's Items</span>"
+msgstr "<span class=\"o_stat_text\">Elem. del empleado</span>"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__cpu
@@ -169,7 +169,7 @@ msgstr "Catálogo"
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__count
 msgid "Count"
-msgstr "Cantidad"
+msgstr "Recuento"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__create_uid
@@ -283,7 +283,7 @@ msgid "Information"
 msgstr "Información"
 
 #. module: sysadmin_base
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_form_view_stock
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_view
 msgid "Internal Equipment"
 msgstr "Equipo interno"
 

@@ -29,7 +29,7 @@
                                 <span class="o_stat_value">
                                     <field name="employee_item_count"/>
                                 </span>
-                                <span class="o_stat_text">Employee Items</span>
+                                <span class="o_stat_text">Employees Items</span>
                             </div>
                         </button>
                         <button class="oe_stat_button" name="button_internal_item_count" icon="fa-th-list" type="object" attrs="{'invisible':[('internal_item_count','=',0)]}">
@@ -65,8 +65,8 @@
                             </field>
                         </page>
                         <page string="Employees" name="workspace_employees">
-                            <field name="employee_ids" context="{'default_workspace_id': active_id}">
-                                <tree>
+                            <field name="employee_ids" options="{'no_create': True}">
+                                <tree create="true">
                                     <field name="name"/>
                                     <field name="has_dialoga_access"/>
                                     <field name="is_trainee"/>

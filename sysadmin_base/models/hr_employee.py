@@ -28,7 +28,7 @@ class HrEmployee(models.Model):
 
     def button_employee_items(self):
         return{
-            'name': 'My Items',
+            'name': 'Employee\'s Items',
             'view_type': 'form',
             'view_mode': 'tree',
             'res_model': 'workspace.item',
