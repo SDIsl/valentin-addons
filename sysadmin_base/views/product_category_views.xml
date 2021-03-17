@@ -20,6 +20,7 @@
             <filter name="activities_upcoming_all" position="after">
                 <separator/>
                 <filter string="Internal Equipment" name="internal_equipment" domain="[('internal_equipment','=',True)]"/>
+                <filter string="Category" name="group_categ_id" context="{'group_by':'categ_id'}"/>
             </filter>
         </field>
     </record>
