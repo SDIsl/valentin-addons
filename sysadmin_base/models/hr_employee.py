@@ -1,7 +1,7 @@
 ###############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ###############################################################################
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class HrEmployee(models.Model):
@@ -25,6 +25,16 @@ class HrEmployee(models.Model):
         inverse_name='employee_id',
         string='Items',
     )
+    item_count = fields.Integer(
+        string="Item Count",
+        compute="_compute_item_count",
+    )
+
+    @api.one
+    def _compute_item_count(self):
+        self.item_count = 0
+        for item in self.item_ids:
+            self.item_count += item.amount
 
     def button_employee_items(self):
         return{

@@ -39,6 +39,10 @@ class Workspace(models.Model):
     location = fields.Char(
         string='Location',
     )
+    item_count = fields.Integer(
+        string="Item Count",
+        compute='_compute_item_count',
+    )
     employee_count = fields.Integer(
         string='Employee Count',
         compute='_compute_employee_count',
@@ -51,6 +55,12 @@ class Workspace(models.Model):
         string='Employee Item Count',
         compute='_compute_employee_item_count',
     )
+
+    @api.one
+    def _compute_item_count(self):
+        self.item_count = 0
+        for item in self.item_ids:
+            self.item_count += item.amount
 
     @api.one
     def _compute_employee_count(self):
