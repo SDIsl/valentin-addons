@@ -24,6 +24,7 @@ class WorkspaceItem(models.Model):
     )
     amount = fields.Integer(
         string='Amount',
+        default=1,
     )
     sn = fields.Char(
         string='Serial Number',
