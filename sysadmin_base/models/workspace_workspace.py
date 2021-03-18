@@ -73,7 +73,7 @@ class Workspace(models.Model):
         if self._internal_workspaces():
             for workspace in self._internal_workspaces():
                 for item in workspace.item_ids:
-                    self.internal_item_count += item.count
+                    self.internal_item_count += item.amount
 
     def button_internal_item_count(self):
         workspaces = self._internal_workspaces()
@@ -93,7 +93,7 @@ class Workspace(models.Model):
         if len(self.employee_ids) > 0:
             for employee in self.employee_ids:
                 for item in employee.item_ids:
-                    self.employee_item_count += item.count
+                    self.employee_item_count += item.amount
 
     def button_employee_item_count(self):
         return{
