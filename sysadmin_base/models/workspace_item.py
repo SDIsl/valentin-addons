@@ -131,4 +131,4 @@ class WorkspaceItem(models.Model):
     @api.onchange('sn')
     def _onchange_sn(self):
         if self.sn:
-            self.count = 1
+            self.amount = 1
