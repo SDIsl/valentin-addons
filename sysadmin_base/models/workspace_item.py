@@ -124,10 +124,8 @@ class WorkspaceItem(models.Model):
 
     @api.onchange('amount')
     def _onchange_amount(self):
-        if self.amount and self.amount > 1 or self.amount < 0:
+        if self.amount > 1:
             self.sn = False
-        if self.amount < 0:
-            self.amount = 0
 
     @api.onchange('sn')
     def _onchange_sn(self):
