@@ -1,7 +1,7 @@
 ###############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ###############################################################################
-from odoo import api, fields, models
+from odoo import api, fields, models, exceptions
 
 
 class WorkspaceItem(models.Model):
@@ -100,6 +100,16 @@ class WorkspaceItem(models.Model):
         store=True,
         related='employee_id.work_location',
     )
+
+    @api.model
+    def create(self, values):
+        return super(WorkspaceItem, self).create(values)
+    
+    @api.one
+    @api.constrains('amount')
+    def _check_amount(self):
+        if self.amount < 0:
+            raise exceptions.ValidationError('Amount can\'t be neggative.')
 
     @api.model
     def _expand_workspace_ids(self, workspaces, domain, order):
