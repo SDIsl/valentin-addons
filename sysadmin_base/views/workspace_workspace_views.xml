@@ -9,7 +9,7 @@
                 <field name="description"/>
                 <field name="location"/>
                 <field name="workspace_id"/>
-                <field name="item_ids"/>
+                <field name="item_count"/>
                 <field name="employee_ids"/>
                 <field name="employee_item_count"/>
                 <field name="workspace_ids"/>
@@ -29,7 +29,7 @@
                                 <span class="o_stat_value">
                                     <field name="employee_item_count"/>
                                 </span>
-                                <span class="o_stat_text">Employee Items</span>
+                                <span class="o_stat_text">Employees Items</span>
                             </div>
                         </button>
                         <button class="oe_stat_button" name="button_internal_item_count" icon="fa-th-list" type="object" attrs="{'invisible':[('internal_item_count','=',0)]}">
@@ -57,7 +57,7 @@
                                 <tree>
                                     <field name="name"/>
                                     <field name="description"/>
-                                    <field name="count"/>
+                                    <field name="amount" sum="Total amount"/>
                                     <field name="sn"/>
                                     <field name="product_id"/>
                                     <field name="subsidy_id"/>
@@ -65,14 +65,14 @@
                             </field>
                         </page>
                         <page string="Employees" name="workspace_employees">
-                            <field name="employee_ids" context="{'default_workspace_id': active_id}">
-                                <tree>
+                            <field name="employee_ids" options="{'no_create': True}">
+                                <tree create="true">
                                     <field name="name"/>
                                     <field name="has_dialoga_access"/>
                                     <field name="is_trainee"/>
                                     <field name="work_location"/>
                                     <field name="work_email"/>
-                                    <field name="item_ids"/>
+                                    <field name="item_count"/>
                                     <field name="workspace_ids"/>
                                 </tree>
                             </field>
@@ -83,7 +83,7 @@
                                     <field name="name"/>
                                     <field name="description"/>
                                     <field name="location"/>
-                                    <field name="item_ids"/>
+                                    <field name="item_count"/>
                                     <field name="employee_ids"/>
                                     <field name="employee_item_count"/>
                                     <field name="workspace_ids"/>
@@ -104,6 +104,7 @@
                 <field name="name"/>
                 <field name="workspace_id"/>
                 <field name="item_ids"/>
+                <field name="item_count"/>
                 <field name="internal_item_count"/>
                 <field name="employee_count"/>
                 <field name="workspace_ids"/>
@@ -116,7 +117,7 @@
                                 </h3>
                                 <div attrs="{'invisible':[('item_ids','=',())]}">
                                     <b>Items:</b>
-                                    <field name="item_ids"/>
+                                    <field name="item_count"/>
                                 </div>
                                 <div attrs="{'invisible':[('employee_count','=',0)]}">
                                     <p/>

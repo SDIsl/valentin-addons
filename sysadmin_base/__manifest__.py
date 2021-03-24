@@ -27,7 +27,7 @@
     'version': '12.0.1.0.0',
     'depends': [
         'hr',
-        'stock',
+        'product',
     ],
     'data': [
         'security/sysadmin_security.xml',

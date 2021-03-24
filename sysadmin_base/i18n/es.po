@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-11 16:48+0000\n"
-"PO-Revision-Date: 2021-03-11 16:48+0000\n"
+"POT-Creation-Date: 2021-03-18 16:51+0000\n"
+"PO-Revision-Date: 2021-03-18 16:51+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -92,13 +92,13 @@ msgstr ""
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
-msgid "<b>Count:</b>"
+msgid "<b>Amount:</b>"
 msgstr "<b>Cantidad:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
 msgid "<b>Employee Item Count:</b>"
-msgstr "<b>Cantidad de elementos de empleados:</b>"
+msgstr "<b>Recuento de elementos de empleados:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
@@ -108,7 +108,7 @@ msgstr "<b>Empleados:</b>"
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
 msgid "<b>Internal Item Count:</b>"
-msgstr "<b>Cantidad de elementos internos:</b>"
+msgstr "<b>Recuento de elementos internos:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
@@ -136,14 +136,19 @@ msgid "<b>Workspaces:</b>"
 msgstr "<b>Espacios de trabajo:</b>"
 
 #. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
+msgid "<span class=\"o_stat_text\">Employee's Items</span>"
+msgstr "<span class=\"o_stat_text\">Elem. del empleado</span>"
+
+#. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
-msgid "<span class=\"o_stat_text\">Employee Items</span>"
-msgstr "<span class=\"o_stat_text\">Elementos de empleados</span>"
+msgid "<span class=\"o_stat_text\">Employees Items</span>"
+msgstr "<span class=\"o_stat_text\">Elem. de empleados</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
 msgid "<span class=\"o_stat_text\">Internal Items</span>"
-msgstr "<span class=\"o_stat_text\">Elementos internos</span>"
+msgstr "<span class=\"o_stat_text\">Elem. internos</span>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
@@ -151,9 +156,9 @@ msgid "<span class=\"o_stat_text\">Items</span>"
 msgstr "<span class=\"o_stat_text\">Elementos</span>"
 
 #. module: sysadmin_base
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
-msgid "<span class=\"o_stat_text\">My Items</span>"
-msgstr "<span class=\"o_stat_text\">Mis elementos</span>"
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__amount
+msgid "Amount"
+msgstr "Cantidad"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__cpu
@@ -167,9 +172,9 @@ msgid "Catalogue"
 msgstr "Catálogo"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__count
-msgid "Count"
-msgstr "Cantidad"
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_view
+msgid "Category"
+msgstr "Categoría"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__create_uid
@@ -219,17 +224,22 @@ msgstr "Empleado"
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_count
 msgid "Employee Count"
-msgstr "Nº de empleados"
+msgstr "Recuento de empleados"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__employee_item_count
 msgid "Employee Item Count"
-msgstr "Cantidad de elementos de empleados"
+msgstr "Recuento de elementos de empleados"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__employee_location
 msgid "Employee location"
 msgstr "Ubicación del empleado"
+
+#. module: sysadmin_base
+#: model:res.groups,name:sysadmin_base.group_sysadmin_employee
+msgid "Employee self-management of Items"
+msgstr "Autogestión de elementos por parte de los empleados"
 
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_employees
@@ -283,14 +293,14 @@ msgid "Information"
 msgstr "Información"
 
 #. module: sysadmin_base
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_form_view_stock
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_search_view
 msgid "Internal Equipment"
 msgstr "Equipo interno"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__internal_item_count
 msgid "Internal Item Count"
-msgstr "Cantidad de elementos internos"
+msgstr "Recuento de elementos internos"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
@@ -315,6 +325,13 @@ msgstr "En prácticas"
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_tree
 msgid "Item"
 msgstr "Elemento"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee__item_count
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__item_count
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__item_count
+msgid "Item Count"
+msgstr "Recuento de Elementos"
 
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_items
@@ -459,6 +476,14 @@ msgstr "Características técnicas"
 #: model:res.groups,comment:sysadmin_base.group_sysadmin_sysadmin
 msgid "The user will have access to all configuration of SysAdmin."
 msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_tree
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_subsidy_view_form
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+msgid "Total amount"
+msgstr "Importe Total"
 
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_workspace_workspace

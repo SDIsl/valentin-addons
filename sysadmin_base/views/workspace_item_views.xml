@@ -17,7 +17,7 @@
             <kanban string="Items" default_group_by="workspace_id">
                 <field name="name"/>
                 <field name="sn"/>
-                <field name="count"/>
+                <field name="amount"/>
                 <field name="workspace_location"/>
                 <field name="employee_location"/>
                 <templates>
@@ -31,9 +31,9 @@
                                     <b>SN:</b>
                                     <field name="sn"/>
                                 </div>
-                                <div attrs="{'invisible':[('count','=',False)]}">
-                                    <b>Count:</b>
-                                    <field name="count"/>
+                                <div attrs="{'invisible':[('amount','&lt;',2)]}">
+                                    <b>Amount:</b>
+                                    <field name="amount"/>
                                 </div>
                                 <b>Location:</b>
                                 <field name="workspace_location" attrs="{'invisible':[('workspace_location','=',False)]}"/>
@@ -52,7 +52,7 @@
             <tree string="Item">
                 <field name="name"/>
                 <field name="description"/>
-                <field name="count"/>
+                <field name="amount" sum="Total amount"/>
                 <field name="sn"/>
                 <field name="product_id"/>
                 <field name="workspace_id"/>
@@ -81,7 +81,7 @@
                     <group string="Information">
                         <field name="description"/>
                         <group>
-                            <field name="count"/>
+                            <field name="amount"/>
                             <field name="sn"/>
                         </group>
                         <group>

@@ -39,6 +39,10 @@ class Workspace(models.Model):
     location = fields.Char(
         string='Location',
     )
+    item_count = fields.Integer(
+        string="Item Count",
+        compute='_compute_item_count',
+    )
     employee_count = fields.Integer(
         string='Employee Count',
         compute='_compute_employee_count',
@@ -51,6 +55,12 @@ class Workspace(models.Model):
         string='Employee Item Count',
         compute='_compute_employee_item_count',
     )
+
+    @api.one
+    def _compute_item_count(self):
+        self.item_count = 0
+        for item in self.item_ids:
+            self.item_count += item.amount
 
     @api.one
     def _compute_employee_count(self):
@@ -73,7 +83,7 @@ class Workspace(models.Model):
         if self._internal_workspaces():
             for workspace in self._internal_workspaces():
                 for item in workspace.item_ids:
-                    self.internal_item_count += item.count
+                    self.internal_item_count += item.amount
 
     def button_internal_item_count(self):
         workspaces = self._internal_workspaces()
@@ -93,7 +103,7 @@ class Workspace(models.Model):
         if len(self.employee_ids) > 0:
             for employee in self.employee_ids:
                 for item in employee.item_ids:
-                    self.employee_item_count += item.count
+                    self.employee_item_count += item.amount
 
     def button_employee_item_count(self):
         return{
