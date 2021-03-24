@@ -104,7 +104,7 @@ class WorkspaceItem(models.Model):
     @api.model
     def create(self, values):
         return super(WorkspaceItem, self).create(values)
-    
+
     @api.one
     @api.constrains('amount')
     def _check_amount(self):

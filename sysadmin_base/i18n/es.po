@@ -93,7 +93,7 @@ msgstr ""
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
 msgid "<b>Amount:</b>"
-msgstr "<b>Importe:</b>"
+msgstr "<b>Cantidad:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
@@ -483,7 +483,7 @@ msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_subsidy_view_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
 msgid "Total amount"
-msgstr "Importe Total"
+msgstr "Cantidad Total"
 
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_workspace_workspace
