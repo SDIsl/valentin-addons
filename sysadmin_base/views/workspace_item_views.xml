@@ -81,7 +81,7 @@
                     <group string="Information">
                         <field name="description"/>
                         <group>
-                            <field name="amount"/>
+                            <field name="amount" attrs="{'readonly': [('amount', '&lt;', 0)]}" placeholder="It can't be lower than 0."/>
                             <field name="sn"/>
                         </group>
                         <group>
