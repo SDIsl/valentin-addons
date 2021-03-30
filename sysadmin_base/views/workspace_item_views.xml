@@ -16,6 +16,7 @@
         <field name="arch" type="xml">
             <kanban string="Items" default_group_by="workspace_id">
                 <field name="name"/>
+                <field name="internal_reference"/>
                 <field name="sn"/>
                 <field name="amount"/>
                 <field name="workspace_location"/>
@@ -52,6 +53,7 @@
             <tree string="Item">
                 <field name="name"/>
                 <field name="description"/>
+                <field name="internal_reference"/>
                 <field name="amount" sum="Total amount"/>
                 <field name="sn"/>
                 <field name="product_id"/>
@@ -81,6 +83,7 @@
                     <group string="Information">
                         <field name="description"/>
                         <group>
+                            <field name="internal_reference"/>
                             <field name="amount" attrs="{'readonly': [('amount', '&lt;', 0)]}" placeholder="It can't be lower than 0."/>
                             <field name="sn"/>
                         </group>

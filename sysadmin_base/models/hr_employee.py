@@ -7,8 +7,8 @@ from odoo import api, fields, models
 class HrEmployee(models.Model):
     _inherit = 'hr.employee'
 
-    has_dialoga_access = fields.Boolean(
-        string='Has Dialoga access',
+    has_voip_switchboard_access = fields.Boolean(
+        string='Has VoIP Switchboard access',
     )
     is_trainee = fields.Boolean(
         string='Is trainee',

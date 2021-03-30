@@ -13,6 +13,11 @@ class WorkspaceItem(models.Model):
             'unique(sn)',
             'SN already exists!',
         ),
+        (
+            'internal_reference_unique_item',
+            'unique(name, internal_reference)',
+            'Internal Reference already exists on that item!',
+        ),
     ]
 
     name = fields.Char(
@@ -21,6 +26,9 @@ class WorkspaceItem(models.Model):
     )
     description = fields.Text(
         string='Description',
+    )
+    internal_reference = fields.Char(
+        string='Internal Reference',
     )
     amount = fields.Integer(
         string='Amount',

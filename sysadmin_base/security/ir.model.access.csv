@@ -4,4 +4,6 @@ sysadmin_group_workspace_items_access,SysAdmin Workspace Items managing,model_wo
 sysadmin_group_item_subsidies_access,SysAdmin Items Subsidies managing,model_workspace_item_subsidy,sysadmin_base.group_sysadmin_sysadmin,1,1,1,1
 sysadmin_group_hr_employee_access,SysAdmin Employee managing,model_hr_employee,sysadmin_base.group_sysadmin_sysadmin,1,1,0,0
 employee_group_workspace_items_access,Employees Workspaces Items view and modify,model_workspace_item,sysadmin_base.group_sysadmin_employee,1,1,0,0
-employee_group_workspaces_access,Employees Workspaces view,model_workspace_workspace,sysadmin_base.group_sysadmin_employee,1,0,0,0
+employee_group_workspaces_view,Employees Workspaces view,model_workspace_workspace,sysadmin_base.group_sysadmin_employee,1,0,0,0
+internal_user_workspace_items_view,Internal User Workspaces Items view,model_workspace_item,base.group_user,1,0,0,0
+internal_user_workspaces_view,Internal User Workspaces view,model_workspace_workspace,base.group_user,1,0,0,0
