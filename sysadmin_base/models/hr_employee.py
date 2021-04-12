@@ -60,7 +60,8 @@ class HrEmployee(models.Model):
             'views': [(view.id, 'form')],
             'context': {
                 'default_employee_id': self.id,
-                'default_has_voip_switchboard_access': self.has_voip_switchboard_access,
+                'default_has_voip_switchboard_access':
+                    self.has_voip_switchboard_access,
                 'default_is_trainee': self.is_trainee,
             },
             'type': 'ir.actions.act_window',
