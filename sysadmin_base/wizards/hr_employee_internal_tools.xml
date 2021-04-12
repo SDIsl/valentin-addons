@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="employee_internal_tools_view_form" model="ir.ui.view">
+        <field name="model">hr.employee.internal_tools</field>
+        <field name="arch" type="xml">
+            <form string="Assistant to edit internal tools of employees">
+                <group>
+                    <field name="has_voip_switchboard_access"/>
+                    <field name="is_trainee"/>
+                </group>
+                <footer>
+                    <button name="edit_employee_internal_tools_action" type="object" string="Accept" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

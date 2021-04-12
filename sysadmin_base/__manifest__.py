@@ -39,6 +39,7 @@
         'views/workspace_item_subsidy_views.xml',
         'views/workspace_item_views.xml',
         'views/workspace_workspace_views.xml',
+        'wizards/hr_employee_internal_tools.xml',
     ],
     'application': True,
 }

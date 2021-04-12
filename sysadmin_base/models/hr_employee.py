@@ -19,6 +19,7 @@ class HrEmployee(models.Model):
         column1='employee_id',
         column2='workspace_id',
         string='Workspaces',
+        readonly=True,
     )
     item_ids = fields.One2many(
         comodel_name='workspace.item',
@@ -44,4 +45,24 @@ class HrEmployee(models.Model):
             'res_model': 'workspace.item',
             'type': 'ir.actions.act_window',
             'domain': [('employee_id', '=', self.id)],
+        }
+
+    def action_button_internal_tools(self):
+        self.ensure_one()
+        view = self.env.ref(
+            'sysadmin_base.employee_internal_tools_view_form')
+        return {
+            'name': 'Edit Internal Tools',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'hr.employee.internal_tools',
+            'view_id': view.id,
+            'views': [(view.id, 'form')],
+            'context': {
+                'default_employee_id': self.id,
+                'default_has_voip_switchboard_access': self.has_voip_switchboard_access,
+                'default_is_trainee': self.is_trainee,
+            },
+            'type': 'ir.actions.act_window',
+            'target': 'new',
         }
