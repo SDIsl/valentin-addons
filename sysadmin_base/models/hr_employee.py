@@ -19,7 +19,6 @@ class HrEmployee(models.Model):
         column1='employee_id',
         column2='workspace_id',
         string='Workspaces',
-        readonly=True,
     )
     item_ids = fields.One2many(
         comodel_name='workspace.item',
@@ -60,9 +59,12 @@ class HrEmployee(models.Model):
             'views': [(view.id, 'form')],
             'context': {
                 'default_employee_id': self.id,
+                'default_name': self.name,
                 'default_has_voip_switchboard_access':
                     self.has_voip_switchboard_access,
                 'default_is_trainee': self.is_trainee,
+                'default_item_ids': [(6, 0, self.item_ids.ids)],
+                'default_workspace_ids': [(6, 0, self.workspace_ids.ids)],
             },
             'type': 'ir.actions.act_window',
             'target': 'new',

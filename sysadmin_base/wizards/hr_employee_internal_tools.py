@@ -11,11 +11,22 @@ class HrEmployeeInternalTools(models.TransientModel):
     employee_id = fields.Integer(
         string='Employee ID',
     )
+    name = fields.Char(
+        string='Name',
+    )
     has_voip_switchboard_access = fields.Boolean(
         string='Has VoIP Switchboard access',
     )
     is_trainee = fields.Boolean(
         string='Is trainee',
+    )
+    workspace_ids = fields.Many2many(
+        comodel_name='workspace.workspace',
+        string='Workspaces',
+    )
+    item_ids = fields.Many2many(
+        comodel_name='workspace.item',
+        string='Items',
     )
 
     def edit_employee_internal_tools_action(self):
@@ -25,4 +36,6 @@ class HrEmployeeInternalTools(models.TransientModel):
         ]).write({
             'has_voip_switchboard_access': self.has_voip_switchboard_access,
             'is_trainee': self.is_trainee,
+            'item_ids': [(6, 0, self.item_ids.ids)],
+            'workspace_ids': [(6, 0, self.workspace_ids.ids)],
         })
