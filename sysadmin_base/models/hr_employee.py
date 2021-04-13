@@ -1,7 +1,7 @@
 ###############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ###############################################################################
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 
 class HrEmployee(models.Model):
@@ -51,7 +51,7 @@ class HrEmployee(models.Model):
         view = self.env.ref(
             'sysadmin_base.employee_internal_tools_view_form')
         return {
-            'name': 'Edit Internal Tools',
+            'name': _('Edit Internal Tools'),
             'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'hr.employee.internal_tools',
