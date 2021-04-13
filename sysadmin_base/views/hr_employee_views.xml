@@ -7,7 +7,7 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <div name="button_box" position="inside">
-                <button class="oe_stat_button" name="button_employee_items" icon="fa-th-list" type="object">
+                <button class="oe_stat_button" name="button_employee_items" icon="fa-th-list" type="object" groups="sysadmin_base.group_sysadmin_sysadmin">
                     <div class="o_field_widget o_stat_info">
                         <span class="o_stat_text">Employee's Items</span>
                     </div>
@@ -15,8 +15,9 @@
             </div>
             <page name="public" position="after">
                 <page name="internal_tools" string="Internal Tools" groups="sysadmin_base.group_sysadmin_sysadmin">
+                    <button string="Edit Internal Tools" name="action_button_internal_tools" type="object" groups="sysadmin_base.group_sysadmin_sysadmin"/>
                     <group>
-                        <field name="has_dialoga_access"/>
+                        <field name="has_voip_switchboard_access"/>
                         <field name="is_trainee"/>
                     </group>
                     <notebook>
@@ -24,6 +25,7 @@
                             <field name="item_ids" context="{'default_employee_id': active_id}">
                                 <tree>
                                     <field name="name"/>
+                                    <field name="internal_reference"/>
                                     <field name="amount" sum="Total amount"/>
                                     <field name="sn"/>
                                     <field name="product_id"/>
@@ -34,7 +36,7 @@
                             </field>
                         </page>
                         <page name="employee_workspaces" string="Workspaces">
-                            <field name="workspace_ids" context="{'default_employee_id': active_id}">
+                            <field name="workspace_ids">
                                 <tree>
                                     <field name="name"/>
                                     <field name="description"/>
@@ -60,7 +62,7 @@
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <field name="work_phone" position="after">
-                <field name="has_dialoga_access"/>
+                <field name="has_voip_switchboard_access"/>
                 <field name="is_trainee"/>
             </field>
         </field>
@@ -72,7 +74,7 @@
         <field name="type">search</field>
         <field name="arch" type="xml">
             <filter name="activities_upcoming_all" position="after">
-                <filter name="dialoga_access" string="Has Dialoga access" domain="[('has_dialoga_access','=',True)]"/>
+                <filter name="voip_switchboard_access" string="Has VoIP Switchboard access" domain="[('has_voip_switchboard_access','=',True)]"/>
             </filter>
             <filter name="group_job" position="after">
                 <filter name="group_is_trainee" string="Is trainee" domain="[]" context="{'group_by':'is_trainee'}"/>

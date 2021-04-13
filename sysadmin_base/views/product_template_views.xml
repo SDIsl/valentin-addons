@@ -7,7 +7,7 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <button name="toggle_active" position="after">
-                <button class="oe_stat_button" name="product_item_count" icon="fa-th-list" type="object">
+                <button class="oe_stat_button" name="product_item_count" icon="fa-th-list" type="object" groups="sysadmin_base.group_sysadmin_sysadmin">
                     <div class="o_field_widget o_stat_info">
                         <span class="o_stat_value">
                             <field name="item_count"/>

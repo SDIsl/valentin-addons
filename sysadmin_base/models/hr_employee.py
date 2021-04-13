@@ -1,14 +1,14 @@
 ###############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ###############################################################################
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 
 class HrEmployee(models.Model):
     _inherit = 'hr.employee'
 
-    has_dialoga_access = fields.Boolean(
-        string='Has Dialoga access',
+    has_voip_switchboard_access = fields.Boolean(
+        string='Has VoIP Switchboard access',
     )
     is_trainee = fields.Boolean(
         string='Is trainee',
@@ -44,4 +44,28 @@ class HrEmployee(models.Model):
             'res_model': 'workspace.item',
             'type': 'ir.actions.act_window',
             'domain': [('employee_id', '=', self.id)],
+        }
+
+    def action_button_internal_tools(self):
+        self.ensure_one()
+        view = self.env.ref(
+            'sysadmin_base.employee_internal_tools_view_form')
+        return {
+            'name': _('Edit Internal Tools'),
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'hr.employee.internal_tools',
+            'view_id': view.id,
+            'views': [(view.id, 'form')],
+            'context': {
+                'default_employee_id': self.id,
+                'default_name': self.name,
+                'default_has_voip_switchboard_access':
+                    self.has_voip_switchboard_access,
+                'default_is_trainee': self.is_trainee,
+                'default_item_ids': [(6, 0, self.item_ids.ids)],
+                'default_workspace_ids': [(6, 0, self.workspace_ids.ids)],
+            },
+            'type': 'ir.actions.act_window',
+            'target': 'new',
         }
