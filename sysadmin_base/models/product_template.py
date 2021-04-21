@@ -13,11 +13,6 @@ class ProductTemplate(models.Model):
     information = fields.Text(
         string='Information',
     )
-    hardware_properties = fields.Boolean(
-        readonly=True,
-        store=True,
-        related='categ_id.show_hardware_properties',
-    )
     item_count = fields.Integer(
         string='Items',
         compute='_compute_item_count',
@@ -29,11 +24,6 @@ class ProductTemplate(models.Model):
             [('product_id', '=', self.id)],
             count=True,
         )
-
-    @api.onchange('categ_id')
-    def _onchange_categ_id(self):
-        if self.hardware_properties:
-            self.internal_equipment = True
 
     def product_item_count(self):
         return{

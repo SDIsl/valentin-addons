@@ -62,6 +62,7 @@
                                     <field name="sn"/>
                                     <field name="product_id" context="{'default_internal_equipment':1,'default_sale_ok':0,'default_type':'product'}"/>
                                     <field name="subsidy_id"/>
+                                    <field name="company"/>
                                 </tree>
                             </field>
                         </page>
