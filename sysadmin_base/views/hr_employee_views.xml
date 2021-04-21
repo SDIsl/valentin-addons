@@ -32,6 +32,7 @@
                                     <field name="workspace_id"/>
                                     <field name="workspace_location"/>
                                     <field name="subsidy_id"/>
+                                    <field name="company"/>
                                 </tree>
                             </field>
                         </page>

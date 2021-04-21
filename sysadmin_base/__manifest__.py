@@ -1,7 +1,7 @@
 ###############################################################################
 #
 #    SDi Soluciones Informáticas
-#    Copyright (C) 2020-Today SDi Soluciones Informáticas <www.sdi.es>
+#    Copyright (C) 2021-Today SDi Soluciones Informáticas <www.sdi.es>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -33,7 +33,6 @@
         'security/sysadmin_security.xml',
         'security/ir.model.access.csv',
         'views/hr_employee_views.xml',
-        'views/product_category_views.xml',
         'views/product_template_views.xml',
         'views/sysadmin_menu_views.xml',
         'views/workspace_item_subsidy_views.xml',

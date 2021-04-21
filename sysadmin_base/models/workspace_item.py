@@ -43,10 +43,15 @@ class WorkspaceItem(models.Model):
         comodel_name='workspace.item.subsidy',
         string='Subsidy',
     )
-    hardware_properties = fields.Boolean(
-        readonly=True,
-        store=True,
-        related='product_id.categ_id.show_hardware_properties',
+    company = fields.Selection(
+        string='Company',
+        selection=[
+            ('modulo', 'BETA WEB DESIGN, S.L.'),
+            ('kreare', 'Kreare Digital S.L.'),
+            ('novotic', 'NOVOTIC, S.L.'),
+            ('sdi', 'Sistemas Digitales de Informática S.L.'),
+        ],
+        default='sdi',
     )
     cpu = fields.Char(
         string='CPU',
