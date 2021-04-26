@@ -1,7 +1,7 @@
 ###############################################################################
 #
 #    SDi Soluciones Informáticas
-#    Copyright (C) 2020-Today SDi Soluciones Informáticas <www.sdi.es>
+#    Copyright (C) 2021-Today SDi Soluciones Informáticas <www.sdi.es>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,20 +18,27 @@
 #
 ###############################################################################
 {
-    'name': 'Sysadmin Base',
-    'summary': 'Module for sysadmin using.',
+    'name': 'SysAdmin Base',
+    'summary': 'Module for SysAdmin using.',
     'author': 'Valentín Castravete Georgian, SDi Soluciones Informáticas',
     'website': 'https://sdi.web.sdi.es/odoo/',
     'license': 'AGPL-3',
-    'category': 'Stock',
+    'category': 'SysAdmin',
     'version': '12.0.1.0.0',
     'depends': [
         'hr',
-        'stock',
+        'product',
     ],
     'data': [
+        'security/sysadmin_security.xml',
+        'security/ir.model.access.csv',
         'views/hr_employee_views.xml',
-        'views/product_category_views.xml',
         'views/product_template_views.xml',
-    ]
+        'views/sysadmin_menu_views.xml',
+        'views/workspace_item_subsidy_views.xml',
+        'views/workspace_item_views.xml',
+        'views/workspace_workspace_views.xml',
+        'wizards/hr_employee_internal_tools.xml',
+    ],
+    'application': True,
 }

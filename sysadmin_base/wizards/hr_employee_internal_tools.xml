@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="employee_internal_tools_view_form" model="ir.ui.view">
+        <field name="model">hr.employee.internal_tools</field>
+        <field name="arch" type="xml">
+            <form string="Assistant to edit internal tools of employees">
+                <h1>
+                    <field name="name" readonly="1"/>
+                    <field name="employee_id" attrs="{'invisible': True}"/>
+                </h1>
+                <group>
+                    <field name="has_voip_switchboard_access"/>
+                    <field name="is_trainee"/>
+                </group>
+                <notebook>
+                    <page name="employee_items" string="Items">
+                        <field name="item_ids" context="{'default_employee_id': employee_id}">
+                            <tree>
+                                <field name="name"/>
+                                <field name="internal_reference"/>
+                                <field name="amount" sum="Total amount"/>
+                                <field name="sn"/>
+                                <field name="product_id" context="{'default_internal_equipment':1,'default_sale_ok':0,'default_type':'product'}"/>
+                                <field name="workspace_id"/>
+                                <field name="workspace_location"/>
+                                <field name="subsidy_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="employee_workspaces" string="Workspaces">
+                        <field name="workspace_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="location"/>
+                                <field name="workspace_id"/>
+                                <field name="item_count"/>
+                                <field name="employee_ids"/>
+                                <field name="employee_item_count"/>
+                                <field name="workspace_ids"/>
+                                <field name="internal_item_count"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="edit_employee_internal_tools_action" type="object" string="Accept" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

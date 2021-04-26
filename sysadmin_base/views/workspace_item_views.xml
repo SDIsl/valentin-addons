@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="workspace_item_view_search" model="ir.ui.view">
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <search string="Items">
+                <filter string="Workspaces" name="workspace_items" context="{'group_by':'workspace_id'}"/>
+                <filter string="Products" name="product_items" context="{'group_by':'product_id'}"/>
+                <filter string="Employee" name="employee_items" context="{'group_by':'employee_id'}"/>
+                <filter string="Company" name="company_items" context="{'group_by':'company'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="workspace_item_view_kanban" model="ir.ui.view">
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <kanban string="Items" default_group_by="workspace_id">
+                <field name="name"/>
+                <field name="internal_reference"/>
+                <field name="sn"/>
+                <field name="amount"/>
+                <field name="workspace_location"/>
+                <field name="employee_location"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_content">
+                                <h3>
+                                    <field name="name"/>
+                                </h3>
+                                <div attrs="{'invisible':[('sn','=',False)]}">
+                                    <b>SN:</b>
+                                    <field name="sn"/>
+                                </div>
+                                <div attrs="{'invisible':[('amount','&lt;',2)]}">
+                                    <b>Amount:</b>
+                                    <field name="amount"/>
+                                </div>
+                                <b>Location:</b>
+                                <field name="workspace_location" attrs="{'invisible':[('workspace_location','=',False)]}"/>
+                                <field name="employee_location" attrs="{'invisible':[('employee_location','=',False)]}"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="workspace_item_view_tree" model="ir.ui.view">
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <tree string="Item">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="internal_reference"/>
+                <field name="amount" sum="Total amount"/>
+                <field name="sn"/>
+                <field name="product_id"/>
+                <field name="workspace_id"/>
+                <field name="workspace_location"/>
+                <field name="employee_id"/>
+                <field name="employee_location"/>
+                <field name="subsidy_id"/>
+                <field name="company"/>
+                <field name="cpu"/>
+                <field name="ram"/>
+                <field name="data_storage"/>
+                <field name="ip"/>
+                <field name="os_version"/>
+                <field name="microsoft_office_mail"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="workspace_item_view_form" model="ir.ui.view">
+        <field name="model">workspace.item</field>
+        <field name="arch" type="xml">
+            <form string="Item">
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group string="Information">
+                        <field name="description"/>
+                        <group>
+                            <field name="internal_reference"/>
+                            <field name="amount" attrs="{'readonly': [('amount', '&lt;', 0)]}" placeholder="It can't be lower than 0."/>
+                            <field name="sn"/>
+                        </group>
+                        <group>
+                            <field name="product_id" context="{'default_internal_equipment':1,'default_comission_free':0,'default_sale_ok':0,'default_purchase_ok':0,'default_type':'consu'}"/>
+                        </group>
+                        <group>
+                            <field name="workspace_id"/>
+                            <field name="workspace_location"/>
+                        </group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="employee_location"/>
+                        </group>
+                        <group>
+                            <field name="subsidy_id"/>
+                            <field name="company"/>
+                        </group>
+                    </group>
+                    <group name="show_hardware_properties" string="Hardware Properties">
+                        <field name="cpu" placeholder="iX-XXXXNN / AMD XXXXX X / etc"/>
+                        <field name="ram"/>
+                        <field name="data_storage" placeholder="1TB-HDD / 512GB-SSD"/>
+                        <field name="ip" placeholder="X.X.X.X"/>
+                        <field name="os_version"/>
+                        <field name="microsoft_office_mail"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
