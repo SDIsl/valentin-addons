@@ -24,10 +24,6 @@ class HrEmployeeInternalTools(models.TransientModel):
         comodel_name='workspace.workspace',
         string='Workspaces',
     )
-    item_ids = fields.Many2many(
-        comodel_name='workspace.item',
-        string='Items',
-    )
 
     def edit_employee_internal_tools_action(self):
         self.ensure_one()
@@ -36,6 +32,5 @@ class HrEmployeeInternalTools(models.TransientModel):
         ]).write({
             'has_voip_switchboard_access': self.has_voip_switchboard_access,
             'is_trainee': self.is_trainee,
-            'item_ids': [(6, 0, self.item_ids.ids)],
             'workspace_ids': [(6, 0, self.workspace_ids.ids)],
         })

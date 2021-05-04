@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-21 10:43+0000\n"
-"PO-Revision-Date: 2021-04-21 10:43+0000\n"
+"POT-Creation-Date: 2021-05-04 08:58+0000\n"
+"PO-Revision-Date: 2021-05-04 08:58+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: sysadmin_base
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
-msgid "<b>Amount:</b>"
-msgstr "<b>Cantidad:</b>"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_kanban
@@ -86,11 +81,6 @@ msgid "Accept"
 msgstr "Aceptar"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__amount
-msgid "Amount"
-msgstr "Cantidad"
-
-#. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_hr_employee_internal_tools
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.employee_internal_tools_view_form
 msgid "Assistant to edit internal tools of employees"
@@ -155,7 +145,7 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: sysadmin_base
-#: code:addons/sysadmin_base/models/hr_employee.py:54
+#: code:addons/sysadmin_base/models/hr_employee.py:52
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
 #, python-format
 msgid "Edit Internal Tools"
@@ -242,8 +232,8 @@ msgstr "Referencia interna"
 
 #. module: sysadmin_base
 #: sql_constraint:workspace.item:0
-msgid "Internal Reference already exists on that item!"
-msgstr "La referencia interna de ese tipo de elemento ya existe"
+msgid "Internal Reference already exists!"
+msgstr "La referencia interna ya existe"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
@@ -264,12 +254,6 @@ msgid "Is trainee"
 msgstr "En prácticas"
 
 #. module: sysadmin_base
-#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__amount
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
-msgid "It can't be lower than 0."
-msgstr "No puede ser menor de 0"
-
-#. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_workspace_item
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_tree
@@ -284,19 +268,19 @@ msgid "Item Count"
 msgstr "Recuento de Elementos"
 
 #. module: sysadmin_base
+#: code:addons/sysadmin_base/models/hr_employee.py:41
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_items
 #: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee__item_ids
-#: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee_internal_tools__item_ids
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__item_count
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_template__item_count
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__item_ids
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__item_ids
 #: model:ir.ui.menu,name:sysadmin_base.menu_items
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.employee_internal_tools_view_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_kanban
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
+#, python-format
 msgid "Items"
 msgstr "Elementos"
 
@@ -402,15 +386,6 @@ msgstr "Características técnicas"
 #: model:res.groups,comment:sysadmin_base.group_sysadmin_sysadmin
 msgid "The user will have access to all configuration of SysAdmin."
 msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
-
-#. module: sysadmin_base
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.employee_internal_tools_view_form
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_tree
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_subsidy_view_form
-#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_workspace_view_form
-msgid "Total amount"
-msgstr "Cantidad Total"
 
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_workspace_workspace

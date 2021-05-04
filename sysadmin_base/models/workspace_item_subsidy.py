@@ -31,4 +31,4 @@ class WorkspaceItemSubsidy(models.Model):
     def _compute_item_count(self):
         self.item_count = 0
         for item in self.item_ids:
-            self.item_count += item.amount
+            self.item_count += 1

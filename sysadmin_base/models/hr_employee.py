@@ -34,22 +34,23 @@ class HrEmployee(models.Model):
     def _compute_item_count(self):
         self.item_count = 0
         for item in self.item_ids:
-            self.item_count += item.amount
+            self.item_count += 1
 
     def button_employee_items(self):
         return{
-            'name': 'Employee\'s Items',
-            'view_type': 'form',
-            'view_mode': 'tree',
+            'name': _('Items'),
+            'view_mode': 'tree,form',
             'res_model': 'workspace.item',
             'type': 'ir.actions.act_window',
             'domain': [('employee_id', '=', self.id)],
+            'context': {
+                'default_employee_id': self.id,
+            },
         }
 
     def action_button_internal_tools(self):
         self.ensure_one()
-        view = self.env.ref(
-            'sysadmin_base.employee_internal_tools_view_form')
+        view = self.env.ref('sysadmin_base.employee_internal_tools_view_form')
         return {
             'name': _('Edit Internal Tools'),
             'view_type': 'form',
