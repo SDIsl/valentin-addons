@@ -19,7 +19,6 @@
                 <field name="name"/>
                 <field name="internal_reference"/>
                 <field name="sn"/>
-                <field name="amount"/>
                 <field name="workspace_location"/>
                 <field name="employee_location"/>
                 <templates>
@@ -32,10 +31,6 @@
                                 <div attrs="{'invisible':[('sn','=',False)]}">
                                     <b>SN:</b>
                                     <field name="sn"/>
-                                </div>
-                                <div attrs="{'invisible':[('amount','&lt;',2)]}">
-                                    <b>Amount:</b>
-                                    <field name="amount"/>
                                 </div>
                                 <b>Location:</b>
                                 <field name="workspace_location" attrs="{'invisible':[('workspace_location','=',False)]}"/>
@@ -55,7 +50,6 @@
                 <field name="name"/>
                 <field name="description"/>
                 <field name="internal_reference"/>
-                <field name="amount" sum="Total amount"/>
                 <field name="sn"/>
                 <field name="product_id"/>
                 <field name="workspace_id"/>
@@ -86,7 +80,6 @@
                         <field name="description"/>
                         <group>
                             <field name="internal_reference"/>
-                            <field name="amount" attrs="{'readonly': [('amount', '&lt;', 0)]}" placeholder="It can't be lower than 0."/>
                             <field name="sn"/>
                         </group>
                         <group>

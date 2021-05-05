@@ -15,8 +15,8 @@ class WorkspaceItem(models.Model):
         ),
         (
             'internal_reference_unique_item',
-            'unique(name, internal_reference)',
-            'Internal Reference already exists on that item!',
+            'unique(internal_reference)',
+            'Internal Reference already exists!',
         ),
     ]
 
@@ -29,11 +29,6 @@ class WorkspaceItem(models.Model):
     )
     internal_reference = fields.Char(
         string='Internal Reference',
-    )
-    amount = fields.Integer(
-        string='Amount',
-        default=1,
-        help='It can\'t be lower than 0.',
     )
     sn = fields.Char(
         string='Serial Number',
@@ -135,13 +130,3 @@ class WorkspaceItem(models.Model):
     def _check_employee(self):
         if self.employee_id:
             self.workspace_id = False
-
-    @api.onchange('amount')
-    def _onchange_amount(self):
-        if self.amount > 1:
-            self.sn = False
-
-    @api.onchange('sn')
-    def _onchange_sn(self):
-        if self.sn:
-            self.amount = 1
