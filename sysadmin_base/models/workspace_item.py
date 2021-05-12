@@ -6,6 +6,7 @@ from odoo import api, fields, models
 
 class WorkspaceItem(models.Model):
     _name = 'workspace.item'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Item'
     _sql_constraints = [
         (
@@ -37,6 +38,7 @@ class WorkspaceItem(models.Model):
     subsidy_id = fields.Many2one(
         comodel_name='workspace.item.subsidy',
         string='Subsidy',
+        track_visibility='onchange',
     )
     company = fields.Selection(
         string='Company',
@@ -87,11 +89,13 @@ class WorkspaceItem(models.Model):
         string='Product',
         required=True,
         domain=[('internal_equipment', '=', 'True')],
+        track_visibility='onchange',
     )
     workspace_id = fields.Many2one(
         comodel_name='workspace.workspace',
         string='Workspace',
         group_expand='_expand_workspace_ids',
+        track_visibility='onchange',
     )
     workspace_location = fields.Char(
         string='Workspace location',
@@ -102,12 +106,16 @@ class WorkspaceItem(models.Model):
     employee_id = fields.Many2one(
         comodel_name='hr.employee',
         string='Employee',
+        track_visibility='onchange',
     )
     employee_location = fields.Char(
         string='Employee location',
         readonly=True,
         store=True,
         related='employee_id.work_location',
+    )
+    is_bookable = fields.Boolean(
+        string='Is bookable',
     )
 
     @api.model

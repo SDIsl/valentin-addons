@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-
     <record id="view_employee_form" model="ir.ui.view">
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
@@ -25,9 +24,8 @@
                             <field name="item_ids" context="{'default_employee_id': active_id}">
                                 <tree>
                                     <field name="name"/>
+                                    <field name="description"/>
                                     <field name="internal_reference"/>
-                                    <field name="sn"/>
-                                    <field name="product_id"/>
                                     <field name="workspace_id"/>
                                     <field name="workspace_location"/>
                                     <field name="subsidy_id"/>
@@ -55,7 +53,6 @@
             </page>
         </field>
     </record>
-
     <record id="view_employee_tree" model="ir.ui.view">
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_tree"/>
@@ -67,7 +64,6 @@
             </field>
         </field>
     </record>
-
     <record id="view_employee_filter" model="ir.ui.view">
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_filter"/>
@@ -81,5 +77,4 @@
             </filter>
         </field>
     </record>
-
 </odoo>

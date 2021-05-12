@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 08:58+0000\n"
-"PO-Revision-Date: 2021-05-04 08:58+0000\n"
+"POT-Creation-Date: 2021-05-12 08:44+0000\n"
+"PO-Revision-Date: 2021-05-12 08:44+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -81,10 +81,44 @@ msgid "Accept"
 msgstr "Aceptar"
 
 #. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_needaction
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_needaction
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_hr_employee_internal_tools
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.employee_internal_tools_view_form
 msgid "Assistant to edit internal tools of employees"
 msgstr "Asistente para editar herramientas internas de los empleados"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_attachment_count
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_attachment_count
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: sysadmin_base
+#: model:mail.activity.type,name:sysadmin_base.mail_activity_data_booking
+msgid "Booking"
+msgstr "Reserva"
+
+#. module: sysadmin_base
+#: model:res.groups,name:sysadmin_base.group_sysadmin_booking
+msgid "Booking of Items"
+msgstr "Reserva de elementos"
 
 #. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.employee_internal_tools_view_form
@@ -145,7 +179,7 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: sysadmin_base
-#: code:addons/sysadmin_base/models/hr_employee.py:52
+#: code:addons/sysadmin_base/models/hr_employee.py:55
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_form
 #, python-format
 msgid "Edit Internal Tools"
@@ -192,6 +226,34 @@ msgid "Employees"
 msgstr "Empleados"
 
 #. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__failed_message_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__failed_message_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__failed_message_ids
+msgid "Failed Messages"
+msgstr "Mensajes Fallidos"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_follower_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_follower_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_channel_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_channel_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_partner_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_partner_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
 msgid "General Information"
 msgstr "Información General"
@@ -207,6 +269,27 @@ msgstr "Propiedades de hardware"
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.view_employee_filter
 msgid "Has VoIP Switchboard access"
 msgstr "Tiene acceso a Centralita VoIP"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__message_unread
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__message_unread
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__message_needaction
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__message_needaction
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__message_has_error
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__message_has_error
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_product__information
@@ -245,6 +328,19 @@ msgstr "Herramientas internas"
 #: model:ir.model.fields,field_description:sysadmin_base.field_product_template__internal_equipment
 msgid "Internal equipment"
 msgstr "Equipo interno"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_is_follower
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_is_follower
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__is_bookable
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_search
+msgid "Is bookable"
+msgstr "Se puede reservar"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_hr_employee__is_trainee
@@ -315,6 +411,27 @@ msgid "Location"
 msgstr "Ubicación"
 
 #. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_main_attachment_id
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_main_attachment_id
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_has_error
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_has_error
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__microsoft_office_mail
 msgid "Microsoft Office Mail"
 msgstr "Correo de Microsoft Office"
@@ -334,9 +451,74 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite de la siguiente actividad"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_needaction_counter
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_needaction_counter
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_has_error_counter
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_has_error_counter
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_has_error_counter
+msgid "Number of error"
+msgstr "Número de error"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__message_needaction_counter
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__message_needaction_counter
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__message_has_error_counter
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__message_has_error_counter
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__message_unread_counter
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__message_unread_counter
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__os_version
 msgid "OS Version"
 msgstr "Versión Sistema Operativo"
+
+#. module: sysadmin_base
+#: model_terms:ir.ui.view,arch_db:sysadmin_base.workspace_item_view_form
+msgid "Others"
+msgstr "Otros"
+
+#. module: sysadmin_base
+#: selection:workspace.item,activity_state:0
+msgid "Overdue"
+msgstr "Atrasada"
+
+#. module: sysadmin_base
+#: selection:workspace.item,activity_state:0
+msgid "Planned"
+msgstr "Planeada"
 
 #. module: sysadmin_base
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__product_id
@@ -355,6 +537,11 @@ msgid "Products"
 msgstr "Productos"
 
 #. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: sysadmin_base
 #: sql_constraint:workspace.item:0
 msgid "SN already exists!"
 msgstr "¡Ya existe el Nº de serie!"
@@ -363,6 +550,17 @@ msgstr "¡Ya existe el Nº de serie!"
 #: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__sn
 msgid "Serial Number"
 msgstr "Número de Serie"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
 
 #. module: sysadmin_base
 #: model:ir.actions.act_window,name:sysadmin_base.action_list_subsidies
@@ -378,6 +576,11 @@ msgid "Subsidy"
 msgstr "Subvención"
 
 #. module: sysadmin_base
+#: model:ir.module.category,description:sysadmin_base.module_sysadmin
+msgid "SysAdmin permission"
+msgstr "Permisos de SysAdmin"
+
+#. module: sysadmin_base
 #: model_terms:ir.ui.view,arch_db:sysadmin_base.product_template_form_view
 msgid "Technical Properties"
 msgstr "Características técnicas"
@@ -386,6 +589,39 @@ msgstr "Características técnicas"
 #: model:res.groups,comment:sysadmin_base.group_sysadmin_sysadmin
 msgid "The user will have access to all configuration of SysAdmin."
 msgstr "El usuario podrá acceder a toda la configuración de SysAdmin"
+
+#. module: sysadmin_base
+#: selection:workspace.item,activity_state:0
+msgid "Today"
+msgstr "Hoy"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_unread
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_unread
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes por leer"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__message_unread_counter
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__message_unread_counter
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item__website_message_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_item_subsidy__website_message_ids
+#: model:ir.model.fields,field_description:sysadmin_base.field_workspace_workspace__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: sysadmin_base
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item__website_message_ids
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_item_subsidy__website_message_ids
+#: model:ir.model.fields,help:sysadmin_base.field_workspace_workspace__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
 
 #. module: sysadmin_base
 #: model:ir.model,name:sysadmin_base.model_workspace_workspace
