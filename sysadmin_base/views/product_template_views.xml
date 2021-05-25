@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-
     <record id="product_template_form_view" model="ir.ui.view">
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
@@ -17,13 +16,13 @@
                 </button>
             </button>
             <xpath expr="//div/field[@name='sale_ok']/.." position="after">
-                <div>
+                <div groups="sysadmin_base.group_sysadmin_sysadmin">
                     <field name="internal_equipment"/>
                     <label for="internal_equipment"/>
                 </div>
             </xpath>
             <page name="sales" position="after">
-                <page string="Technical Properties" attrs="{'invisible':[('internal_equipment','=',False)]}" name="technical_properties">
+                <page string="Technical Properties" attrs="{'invisible':[('internal_equipment','=',False)]}" name="technical_properties" groups="sysadmin_base.group_sysadmin_sysadmin">
                     <group>
                         <group name="general_information" string="General Information">
                             <field name="information"/>
@@ -33,16 +32,14 @@
             </page>
         </field>
     </record>
-
     <record id="product_template_search_view" model="ir.ui.view">
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_search_view"/>
         <field name="arch" type="xml">
             <filter name="activities_upcoming_all" position="after">
                 <separator/>
-                <filter string="Internal Equipment" name="internal_equipment" domain="[('internal_equipment','=',True)]"/>
+                <filter string="Internal Equipment" name="internal_equipment" domain="[('internal_equipment','=',True)]" groups="sysadmin_base.group_sysadmin_sysadmin"/>
             </filter>
         </field>
     </record>
-
 </odoo>

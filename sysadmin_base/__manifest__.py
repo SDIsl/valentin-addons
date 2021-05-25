@@ -30,6 +30,7 @@
         'product',
     ],
     'data': [
+        'data/mail_activity_data.xml',
         'security/sysadmin_security.xml',
         'security/ir.model.access.csv',
         'views/hr_employee_views.xml',

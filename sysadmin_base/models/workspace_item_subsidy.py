@@ -6,6 +6,7 @@ from odoo import api, fields, models
 
 class WorkspaceItemSubsidy(models.Model):
     _name = 'workspace.item.subsidy'
+    _inherit = 'mail.thread'
     _description = 'Subsidy'
 
     item_ids = fields.One2many(
